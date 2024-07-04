@@ -1,0 +1,23 @@
+{
+  "name": "helen-portafolio",
+  "version": "1.0.0",
+  "description": "portafolio de la fotografa Helen Miranda.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/HelenMiranda00/Portafolio.git"
+  },
+  "keywords": [
+    "fotografia",
+    "portafolio"
+  ],
+  "author": "github.com/reinnillo",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/HelenMiranda00/Portafolio/issues"
+  },
+  "homepage": "https://github.com/HelenMiranda00/Portafolio#readme"
+}

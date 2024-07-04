@@ -1,0 +1,214 @@
+export class ElementHtml {
+    constructor(selector) {
+        this.element = document.querySelector(selector);
+    }
+
+    // Metodo para cambiar el cotenido del elemento
+    changeContent(newContent) {
+        this.element.textContent = newContent;
+    }
+
+    // Metodo para agregar una clase al elemento
+    addClass(nameClass) {
+        this.element.classList.add(nameClass);
+    }
+
+    // Metodo para eliminar una clase del elemento
+    deleteClass(nameClass) {
+        this.element.classList.remove(nameClass);
+    }
+
+    // Metodo para ocultar el elemento
+    ocultar() {
+        this.element.style.display = "none";
+    }
+
+    // Metodo para mostrar el elemento
+    show() {
+        this.element.style.display = "block";
+    }
+
+    // Metodo para establecer estilos en linea
+    assignStyle(styles) {
+        Object.assign(this.element.style, styles);
+    }
+
+    // Metodo para ajustar un contenedor al tamano de la pantella del dispositivo
+    adjustSizeEqualScreen() {
+        // Obtener el alto y el ancho de la pantalla
+        let screenHeight = document.documentElement.clientHeight - 20;
+        let screenWidht = document.documentElement.clientWidth - 20;
+
+        this.assignStyle({
+            height: `${screenHeight}px`,
+            width: `${screenWidht}px`,
+        });
+    }
+
+    adjustDinamic() {
+        let height = window.innerWidth * 0.90 + "px";
+        let width = window.innerHeight * 0.90 + "px";
+
+        this.element.style.width = height;
+        this.element.style.height = width;
+    }
+
+    centerChildren() {
+        this.assignStyle({
+            display: "grid",
+            placeContent: "center",
+            padding: "10px",
+        });
+    }
+
+    // Metodo para escuchar eventos
+    on(event, callBack) {
+        this.element.addEventListener(event, callBack);
+    }
+}
+
+/**
+ * Elimina una clase de un elemento si la tiene, si no, devuelve un mensaje en consola.
+ * 
+ * @param {HTMLElement} element - El elemento DOM al que se le va a eliminar la clase.
+ * @param {string} classToRemove - El nombre de la clase que se va a eliminar.
+ */
+export const removeClassIfExists = (element, classToRemove) => {
+    if (element.classList.contains(classToRemove)) {
+        element.classList.remove(classToRemove);
+    } else {
+        console.log("El elemento no contiene la 'class' espesificada");
+    }
+};
+
+/**
+ * Verifica si un elemento tiene una clase específica y, si no la tiene, la añade.
+ * 
+ * @param {HTMLElement} element - El elemento DOM al que se va a verificar y añadir la clase.
+ * @param {string} classToVerify - El nombre de la clase que se va a verificar y añadir si no está presente.
+ */
+export const verifyAndAddClass = (element, classToVerify) => {
+    if (!element.classList.contains(classToVerify)) {
+        element.classList.add(classToVerify);
+    }
+};
+
+/**
+ * Objeto de listas de imagenes con tamaños para mobile y desktop con rutas relativas al archivo "index.html"
+ */
+const image = {
+    mobile: [
+        './asset/img/bg-mo-1.jpg',
+    ],
+    desktop: [
+        './asset/img/bg-pc-1.jpg',
+    ],
+};
+
+/**
+ * carga una imagen por medio de su url a un nuevo objeto image y devuelve la imagen cargada.
+ * @param {string} src la url del archivo espesificado.
+ */
+export function cargarImagen(src) {
+    const img = new Image();
+    img.onload = function () {
+        imgPortada.src = src;
+    };
+    img.onerror = function () {
+        console.error('Error al cargar la imagen:', src);
+    };
+
+    img.src = src;
+};
+
+/**
+ * Itera sobre cada elemento del array y lo agrega al contenedor.
+ * @param {Array} array - Array de elementos a agregar.
+ * @param {HTMLElement} container - Contenedor donde se agregarán los elementos.
+ */
+export function AddElementsToContainer(array, container) {
+    array.forEach(element => {
+        container.appendChild(element);
+    });
+};
+
+/**
+ * Crea un botón HTML con los parámetros especificados.
+ * @param {string} className - Clase o clases CSS para el botón.
+ * @param {string} content - Contenido del botón (texto o HTML).
+ * @param {function} onClickHandler - Función que se ejecutará cuando se haga clic en el botón.
+ * @param {string} [href='#'] - URL para el atributo href del botón. Valor predeterminado es '#'.
+ * @returns {HTMLElement} - El elemento del botón creado.
+ */
+export function createButton(className, content, onClickHandler, href = "#") {
+    const button = document.createElement('a');
+    button.className = className;
+    button.innerHTML = content;
+    button.href = href;
+
+    if (typeof onClickHandler === 'function') {
+        button.addEventListener('click', onClickHandler);
+    }
+
+    return button;
+};
+
+/**
+ * Muestra una serie de diapositivas/elementos dentro de un contenedor, alternando entre ellas automáticamente.
+ * @param {string} classOfElements - La clase CSS que identifica los elementos a mostrar.
+ * @param {HTMLElement} container - El contenedor que contiene los elementos.
+*/
+let elementIndex = 0;
+export function showElements(classOfElements, container) {
+    const elements = container.getElementsByClassName(classOfElements);
+    for (let i = 0; i < elements.length; i++) {
+        elements[i].style.opacity = '0';
+    }
+
+    elementIndex++;
+
+    if (elementIndex > elements.length) {
+        elementIndex = 1;
+    }
+    elements[elementIndex - 1].style.opacity = '1';
+    setTimeout(() => showSlides(classOfElements, container), 8000); // Change image every 8 seconds
+};
+
+/**
+ * Verifica si un elemento con un ID especificado existe en el DOM.
+ * @param {string} targetElementId - El ID del elemento a verificar.
+ * @returns {HTMLElement|null} - El elemento si existe, o null si no se encuentra.
+ */
+export function VerifyExistElement(targetElementId) {
+    const targetElement = document.getElementById(targetElementId);
+    if (!targetElement) {
+        console.error(`Element with id "${targetElementId}" not found.`);
+        return null;
+    }
+    return targetElement;
+};
+
+/**
+ * Ajusta las dimenciones de un elemento especifico que exista en el DOM en funcion de las medidas del viewport.
+ * @param {string} targetElement - El elemento para ajustar sus dimenciones.
+ */
+export function autoSize(targetElement) {
+    let height = document.documentElement.clientHeight / 16;
+    let width = document.documentElement.clientWidth / 16;
+    targetElement.style.width = width + 'rem';
+    targetElement.style.height = height + 'rem';
+}
+
+// Funcion para verificar si el elemento esta en el Viewport
+export function isElementInViewport(element) {
+    // obtenemos las dimenciones del elemento html
+    let rect = element.getBoundingClientRect();
+    // se evaluan todas las caras del elemento y de existir seria true o false en caso contrario.
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}

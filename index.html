@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/root.css">
+    <link rel="stylesheet" href="./style/home.css">
+    <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="./style/portafolio.css">
+    <link rel="stylesheet" href="./style/feedback.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <title>Helen Miranda - Portafolio</title>
+</head>
+
+<body>
+    <!-- navegation section button -->
+    <div class="nav-button">
+        <span id="section-name">section</span>
+        <div class="buttons">
+            <button id="up-arrow" type="button" title="button-nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z">
+                    </path>
+                </svg>
+            </button>
+            <button id="down-arrow" type="button" title="button-nav">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="container-all" id="App">
+
+        <!-- Home Section -->
+        <section class="section" id="home">
+
+            <div id="portada-home"></div>
+
+            <header>
+                <nav class="nav">
+                    <div class="name-icon">
+                        <div>H. Miranda</div>
+                    </div>
+                    <ul>
+                        <li><a href="#about" id="nav-about">About me</a></li>
+                        <li><a href="#portafolio" id="nav-portafolio">Portafolio</a></li>
+                        <li><a href="#feedback" id="nav-feedback">Feedback</a></li>
+                        <li><a href="#contact" id="nav-contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <div class="header-mobile">
+                <nav class="nav-mobile">
+                    <div class="name-icon">
+                        <div>H. Miranda</div>
+                    </div>
+                    <div class="cta-box-2">
+                        <a href="#contact" id="cta">Contact</a>
+                    </div>
+                </nav>
+                <div id="button-menu" type="button" title="button-menu">
+                    <span></span>
+                    <span></span>
+                    <div>
+                        <ul>
+                            <li><a href="#about">About me</a></li>
+                            <li><a href="#portafolio">Portafolio</a></li>
+                            <li><a href="#feedback">Feedback</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="presentation">
+                <hgroup class="name">
+                    <h1>Helen Miranda</h1>
+                    <p>photographer</p>
+                </hgroup>
+                <div class="cta-box">
+                    <a href="#contact" id="cta">Contact</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+         <section class="section" id="about"></section>
+
+         <!-- Portafolio Section-->
+         <section class="section" id="portafolio"></section>
+
+         <!-- Testimonial Section-->
+         <section class="section" id="feedback">
+            <div class="tittle">
+                <h2>Testimonios</h2>
+            </div>
+         </section>
+
+         <!-- Contact Section-->
+         <section class="section" id="contact">
+            <div class="tittle">
+                <h2>Contacto</h2>
+            </div>
+         </section>
+         
+
+    </div>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./js/menuMobile.js"></script>
+    <script type="module" src="./js/slideSectionPortafolio.js"></script>
+</body>
+
+</html>

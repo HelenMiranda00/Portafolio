@@ -1,0 +1,56 @@
+#about {
+    /* transform: translate3d(0, 100vh, 0); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+
+    figure,
+    .about-content {
+        height: 100%;
+        width: 50%;
+    }
+
+    figure {
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .about-content {
+        padding: calc(var(--space-between-element)*4);
+
+        .tittle {
+            margin-bottom: var(--space-between-element);
+
+            h2 {}
+        }
+
+        .des {
+
+            p {
+                margin-bottom: var(--space-between-element);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #App {
+
+        #about {
+            flex-direction: column;
+
+            figure, .about-content {
+                width: 100%;
+            }
+            .about-content {
+                padding: var(--space-between-element);
+            }
+
+        }
+    }
+}
