@@ -14,103 +14,165 @@
 </head>
 
 <body>
-    <!-- navegation section button -->
-    <div class="nav-button">
-        <span id="section-name">section</span>
-        <div class="buttons">
-            <button id="up-arrow" type="button" title="button-nav">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                        d="M3 19h18a1.002 1.002 0 0 0 .823-1.569l-9-13c-.373-.539-1.271-.539-1.645 0l-9 13A.999.999 0 0 0 3 19z">
-                    </path>
-                </svg>
-            </button>
-            <button id="down-arrow" type="button" title="button-nav">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <path
-                        d="M11.178 19.569a.998.998 0 0 0 1.644 0l9-13A.999.999 0 0 0 21 5H3a1.002 1.002 0 0 0-.822 1.569l9 13z">
-                    </path>
-                </svg>
-            </button>
-        </div>
-    </div>
-    <div class="container-all" id="App">
+    <!-- Home Section -->
+    <section id="home">
 
-        <!-- Home Section -->
-        <section class="section" id="home">
+        <div id="portada-home"></div>
 
-            <div id="portada-home"></div>
-
-            <header>
-                <nav class="nav">
-                    <div class="name-icon">
-                        <div>H. Miranda</div>
-                    </div>
+        <header class="header-desktop">
+            <nav class="nav">
+                <div class="name-icon">
+                    <a href="#about">H. Miranda</a>
+                </div>
+                <ul>
+                    <li><a href="#about" id="nav-about">About me</a></li>
+                    <li><a href="#portafolio" id="nav-portafolio">Portafolio</a></li>
+                    <li><a href="#feedback" id="nav-feedback">Feedback</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <header class="header-mobile">
+            <nav class="nav-mobile">
+                <div class="name-icon">
+                    <div>H. Miranda</div>
+                </div>
+                <div class="cta-box-2">
+                    <a href="#contact" id="cta">Contact</a>
+                </div>
+            </nav>
+            <div id="button-menu" type="button" title="button-menu">
+                <span></span>
+                <span></span>
+                <div>
                     <ul>
-                        <li><a href="#about" id="nav-about">About me</a></li>
-                        <li><a href="#portafolio" id="nav-portafolio">Portafolio</a></li>
-                        <li><a href="#feedback" id="nav-feedback">Feedback</a></li>
-                        <li><a href="#contact" id="nav-contact">Contact</a></li>
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
                     </ul>
-                </nav>
-            </header>
-            
-            <div class="header-mobile">
-                <nav class="nav-mobile">
-                    <div class="name-icon">
-                        <div>H. Miranda</div>
-                    </div>
-                    <div class="cta-box-2">
-                        <a href="#contact" id="cta">Contact</a>
-                    </div>
-                </nav>
-                <div id="button-menu" type="button" title="button-menu">
-                    <span></span>
-                    <span></span>
-                    <div>
-                        <ul>
-                            <li><a href="#about">About me</a></li>
-                            <li><a href="#portafolio">Portafolio</a></li>
-                            <li><a href="#feedback">Feedback</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
                 </div>
             </div>
+        </header>
 
-            <div class="presentation">
-                <hgroup class="name">
-                    <h1>Helen Miranda</h1>
-                    <p>photographer</p>
+        <aside class="presentation">
+            <hgroup class="name">
+                <h1>Helen Miranda</h1>
+                <p>photographer</p>
+            </hgroup>
+            <div class="cta-box">
+                <a href="#contact" id="cta">Contact</a>
+            </div>
+        </aside>
+    </section>
+
+    <main class="container-all" id="App">
+        <!-- About Section -->
+        <section class="section" id="about">
+            <figure>
+                <img src="../asset/img/profile/p-1.webp" alt="imagen de la fotografa Helen miranda">
+            </figure>
+            
+            <div class="about-content">
+                <hgroup class="tittle">
+                    <h2>Sobre mi</h2>
                 </hgroup>
-                <div class="cta-box">
-                    <a href="#contact" id="cta">Contact</a>
+                <aside class="des">
+                    <p>parrafo</p>
+                    <p>parrafo</p>
+                    <p>parrafo</p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Portafolio Section-->
+        <section class="section" id="portafolio">
+            <hgroup class="tittle">
+                <h2>Portafolio</h2>
+            </hgroup>
+            
+            <div id="filter-box">
+                <button type="button" id="btn-type-1" class="btn-filter">type name-1</button>
+                <button type="button" id="btn-type-2" class="btn-filter">Type name-2</button>
+                <button type="button" id="btn-type-3" class="btn-filter">Type name-3</button>
+            </div>
+            
+            <div class="portafolio-content">
+                <div class="slide animate">
+                    <figure>
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    </figure>
+                    <img class="img-vertical img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    <figure>
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    </figure>
+                </div>
+            
+                <div class="slide">
+                    <figure>
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    </figure>
+                    <img class="img-vertical img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    <figure>
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    </figure>
+                </div>
+            
+                <div class="slide">
+                    <figure>
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    </figure>
+                    <img class="img-vertical img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    <figure>
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
+                    </figure>
+                </div>
+        </section>
+
+        <!-- Testimonial Section-->
+        <section class="section" id="feedback">
+            <hgroup class="tittle">
+                <h2>Testimonios</h2>
+                <p> texto intro </p>
+            </hgroup>
+            <div class="content-testimonial">
+                <div class="box">
+                    <figure class="testimonial">
+                        <img src="" alt="">
+                        <figcaption>
+                            <p>testimonio de "nombre"</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <img src="" alt="">
+                        <figcaption>
+                            <p>testimonio de "nombre"</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <img src="" alt="">
+                        <figcaption>
+                            <p>testimonio de "nombre"</p>
+                        </figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-         <section class="section" id="about"></section>
-
-         <!-- Portafolio Section-->
-         <section class="section" id="portafolio"></section>
-
-         <!-- Testimonial Section-->
-         <section class="section" id="feedback">
-            <div class="tittle">
-                <h2>Testimonios</h2>
-            </div>
-         </section>
-
-         <!-- Contact Section-->
-         <section class="section" id="contact">
-            <div class="tittle">
+        <!-- Contact Section-->
+        <section class="section" id="contact">
+            <hgroup class="tittle">
                 <h2>Contacto</h2>
-            </div>
-         </section>
-         
-
-    </div>
+            </hgroup>
+        </section>    
+    </main>
     <script type="module" src="./main.js"></script>
     <script type="module" src="./js/menuMobile.js"></script>
     <script type="module" src="./js/slideSectionPortafolio.js"></script>

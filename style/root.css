@@ -1,38 +1,38 @@
 :root {
     /* colors */
     /*chateau-green:*/
-    --green-50: #f0fdf4;
-    --green-100: #dbfde8;
-    --green-200: #b9f9d0;
-    --green-300: #82f3ad;
-    --green-400: #44e480;
-    --green-500: #1ccb5f;
-    --green-600: #10a248;
-    --green-700: #11843e;
-    --green-800: #136834;
-    --green-900: #12552e;
-    --green-950: #033017; 
+    --color-50: #f0fdf4;
+    --color-100: #dbfde8;
+    --color-200: #b9f9d0;
+    --color-300: #82f3ad;
+    --color-400: #44e480;
+    --color-500: #1ccb5f;
+    --color-600: #10a248;
+    --color-700: #11843e;
+    --color-800: #136834;
+    --color-900: #12552e;
+    --color-950: #033017; 
 
     /* general style */
-    --bg-color-web: var(--green-50);
+    --bg-color-web: var(--color-50);
     --font-family: ;
     --font-size-tittle: 5vw;
     --font-size-profetion: 2vw;
     --padding-containers: 1rem;
+    --large-padding: 4rem;
     --space-between-element: 1rem;
     --border-radius: .5rem;
 
     /* home */
-    --text-color-home: var(--green-100);
+    --text-color-home: var(--color-100);
 
     /* call to action button */
-    --cta-bg: var(--green-100);
-    --cta-color: var(--green-900);
+    --cta-bg: var(--color-100);
+    --cta-color: var(--color-900);
 
     /* mobile menu */
     --bg-mobile-menu: rgb(130 243 173 / 33%);
     --bg-mobile-nav: transparent;
-   
 }
 
 *,
@@ -62,45 +62,16 @@ body {
     line-height: 1.6;
 }
 
-.nav-button {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-
-    span {
-        font-size: var(--font-size-profetion);
-        color: var(--green-950);
-    }
-
-    .buttons {
-        display: flex;
-        flex-direction: column;
-
-        button {
-            background: transparent;
-
-            svg {
-                fill: var(--cta-bg);
-            }
-        }
-    }
-}
-
 .container-all {
     height: 100vh;
     width: 100%;
-    position: relative;
+    background-color: var(--bg-color-web);
     
     .section {
         height: 100vh;
         width: 100%;
+        margin-bottom: 4rem;
         padding: var(--padding-containers);
-        transform-style: preserve-3d;
-        background-color: var(--bg-color-web);
         transition: all .8s ease-in-out;
     }
 

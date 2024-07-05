@@ -3,9 +3,10 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0;
-    transform: translate3d(0, 0, 0);
     color: var(--text-color-home);
+    height: 100vh;
+    width: 100%;
+    margin-bottom: calc(var(--large-padding)+1rem);
 
     #portada-home {
         height: 100vh;
@@ -13,14 +14,14 @@
         top: 0;
         left: 0;
         position: absolute;
-        z-index: -2;
-        background-image: url(../asset/profile/p-1.webp);
+        z-index: -1;
+        background-image: url(../asset/img/bg-desktop/bg-pc-1.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    header {
+    .header-desktop {
         width: 100%;
         padding: var(--padding-containers);
         display: flex;
@@ -34,8 +35,12 @@
             align-items: center;
             justify-content: space-between;
 
-            #name-icon {
-                div {}
+            .name-icon a {
+                cursor: pointer;
+                transition: all .1s;
+            }
+            .name-icon a:hover { 
+                color: var(--color-600);
             }
         }
 
@@ -43,8 +48,14 @@
             display: flex;
             gap: 1rem;
 
-            li { 
-                a {} 
+            li {
+                transition: all .1s;
+                transform: scale(1);
+            }
+
+            li:hover { 
+                color: var(--color-600); 
+                transform: scale(1.1);
             }
         }
 
@@ -60,8 +71,8 @@
     }
 
     .presentation {
-        height: 100%;
-        margin-bottom: 2rem;
+        height: 80%;
+        margin: 3rem;
         padding: var(--padding-containers);
         display: flex;
         flex-direction: column;
@@ -82,10 +93,15 @@
 
             #cta {
                 padding: 1rem;
-                background-color: var(--cta-bg);
+                background-color: var(--color-200);
                 border-radius: var(--border-radius);
                 font-size: var(--font-size-profetion);
-                color: var(--cta-color);
+                color: var(--color-900);
+                cursor: pointer;
+                transition: all .2s;
+            }
+            #cta:hover {
+                background-color: var(--color-500);
             }
         }
     }
@@ -102,7 +118,7 @@
             padding-top: 0;
 
             #portada-home {
-                background-image: url(../asset/profile/p-1.webp);
+                background-image: url(../asset/img/bg-mobile/bg-mo-1.webp);
             }
 
             header,
@@ -198,22 +214,6 @@
 
             .presentation {
                 transition: all .5s;
-            }
-
-            .nav-button {
-                right: 45%;
-
-                span {
-                    font-size: var(--font-size-profetion);
-                }
-
-                .buttons {
-                    button {
-                        svg {
-                            width: 1.3rem;
-                        }
-                    }
-                }
             }
         }
     }

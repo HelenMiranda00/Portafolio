@@ -1,33 +1,50 @@
 #portafolio {
-    /* transform: translate3d(0, 200vh, 0); */
 
     .tittle {
-        margin-bottom: calc(var(--space-between-element)*2);
+        margin-bottom: var(--space-between-element);
+    }
 
-        h2 {}
+    #filter-box {
+        display: flex;
+        justify-content: center;
+        gap: calc(var(--space-between-element)*2);
+        margin-bottom: var(--space-between-element);
+
+        .btn-filter {
+            background-color: var(--color-300);
+            padding: var(--space-between-element);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-filter:hover {
+            background-color: var(--color-500);
+        }
     }
 
     .portafolio-content {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: calc(var(--space-between-element)*2);
+        gap: var(--large-padding);
 
         .slide {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: var(--space-between-element);
             position: relative;
             overflow: hidden;
-            transition: all .7s ease-in-out;
+            width: 10%;
+            border-radius: var(--border-radius);
+            transition: width 2s;
 
             .img-portafolio {
                 object-fit: cover;
             }
 
             .img-vertical {
-                height: 500px;
+                height: 26rem;
             }
 
             figure {
@@ -36,53 +53,88 @@
                 gap: var(--space-between-element);
 
                 .img-horizontal {
-                    width: 315px;
+                    width: 16.25rem;
                     aspect-ratio: 1.3;
                 }
             }
 
-            .name-type-photo {
+            .btn-type-photo {
                 position: absolute;
                 background-color: var(--bg-color-web);
-                padding: calc(var(--space-between-element)*2);
-            }
-
-        }
-        .open-photo {
-
-            .name-type-photo-inOpen {
-                top: 42%;
-                right: 0;
+                cursor: pointer;
             }
         }
 
-        .close-photo {
-            width: 10%;
+        .animate {
+            animation: expandSlowly 2s forwards;
+            gap: var(--space-between-element);
+            border-radius: var(--border-radius);
+        }
 
-            .name-type-photo-inClose {
-                top: 46%;
-                left: 0;
-                padding: .5rem !important;
+        .close-animate {
+            animation: collapseSlowly 2s forwards;
+        }
+    }
+}
+
+@keyframes expandSlowly {
+    from {
+        width: 10%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes collapseSlowly {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    #portafolio {
+        .portafolio-content {
+            flex-direction: column;
+
+            .slide {
+                width: 100%;
+                height: 80px;
+                transition: height 2s;
+            }
+
+            .animate {
+                animation: expandHeight 2s forwards;
+            }
+
+            .close-animate {
+                animation: collapseHeight 2s forwards;
             }
         }
     }
 }
 
-@media (max-width: 768px) {
-    #App {
-        #portafolio {
-            .portafolio-content {
-                flex-direction: column;
+@keyframes expandHeight {
+    from {
+        height: 80px;
+    }
 
-                .close-photo {
-                    height: 50px;
-                    width: 100%;
+    to {
+        height: 500px;
+    }
+}
 
-                    .name-type-photo-inClose {
-                        top: 30%;
-                    }
-                }
-            }
-        }
+@keyframes collapseHeight {
+    from {
+        height: 500px;
+    }
+
+    to {
+        height: 80px;
     }
 }
