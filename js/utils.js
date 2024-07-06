@@ -25,34 +25,6 @@ export const verifyAndAddClass = (element, classToVerify) => {
 };
 
 /**
- * Objeto de listas de imagenes con tamaños para mobile y desktop con rutas relativas al archivo "index.html"
- */
-const image = {
-    mobile: [
-        './asset/img/bg-mo-1.jpg',
-    ],
-    desktop: [
-        './asset/img/bg-pc-1.jpg',
-    ],
-};
-
-/**
- * carga una imagen por medio de su url a un nuevo objeto image y devuelve la imagen cargada.
- * @param {string} src la url del archivo espesificado.
- */
-export function cargarImagen(src) {
-    const img = new Image();
-    img.onload = function () {
-        imgPortada.src = src;
-    };
-    img.onerror = function () {
-        console.error('Error al cargar la imagen:', src);
-    };
-
-    img.src = src;
-};
-
-/**
  * Itera sobre cada elemento del array y lo agrega al contenedor.
  * @param {Array} array - Array de elementos a agregar.
  * @param {HTMLElement} container - Contenedor donde se agregarán los elementos.

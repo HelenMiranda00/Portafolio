@@ -12,7 +12,6 @@ export async function fetchAPI(url, apiKey, options = {}) {
     const headers = {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json'
-        // Add more headers if needed
     };
 
     const fetchOptions = {

@@ -1,20 +1,32 @@
 :root {
     /* colors */
     /*chateau-green:*/
-    --color-50: #f0fdf4;
-    --color-100: #dbfde8;
-    --color-200: #b9f9d0;
-    --color-300: #82f3ad;
-    --color-400: #44e480;
-    --color-500: #1ccb5f;
-    --color-600: #10a248;
-    --color-700: #11843e;
-    --color-800: #136834;
-    --color-900: #12552e;
-    --color-950: #033017; 
+    /* --clr-00: #f0fdf4;
+    --clr-10: #dbfde8;
+    --clr-20: #b9f9d0;
+    --clr-30: #82f3ad;
+    --clr-40: #44e480;
+    --clr-50: #1ccb5f;
+    --clr-60: #10a248;
+    --clr-70: #11843e;
+    --clr-80: #136834;
+    --clr-90: #12552e;
+    --clr-100: #033017;  */
+
+    --clr-00: #f7f4ef; 
+    --clr-10: #ece3d5; 
+    --clr-20: #dac8ae; 
+    --clr-30: #c4a480; 
+    --clr-40: #b2875d; 
+    --clr-50: #9e714c; 
+    --clr-60: #8c5d42; 
+    --clr-70: #714737; 
+    --clr-80: #603d33; 
+    --clr-90: #533630; 
+    --clr-100: #2f1b19;
 
     /* general style */
-    --bg-color-web: var(--color-50);
+    --bg-color-web: var(--clr-00);
     --font-family: ;
     --font-size-tittle: 5vw;
     --font-size-profetion: 2vw;
@@ -24,11 +36,11 @@
     --border-radius: .5rem;
 
     /* home */
-    --text-color-home: var(--color-100);
+    --text-color-home: var(--clr-10);
 
     /* call to action button */
-    --cta-bg: var(--color-100);
-    --cta-color: var(--color-900);
+    --cta-bg: var(--clr-10);
+    --cta-color: var(--clr-90);
 
     /* mobile menu */
     --bg-mobile-menu: rgb(130 243 173 / 33%);
@@ -60,6 +72,8 @@ body {
     font-family: var(--font-family);
     letter-spacing: .8px;
     line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .container-all {

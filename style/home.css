@@ -40,7 +40,7 @@
                 transition: all .1s;
             }
             .name-icon a:hover { 
-                color: var(--color-600);
+                color: var(--clr-60);
             }
         }
 
@@ -54,7 +54,7 @@
             }
 
             li:hover { 
-                color: var(--color-600); 
+                color: var(--clr-60); 
                 transform: scale(1.1);
             }
         }
@@ -93,15 +93,15 @@
 
             #cta {
                 padding: 1rem;
-                background-color: var(--color-200);
+                background-color: var(--clr-20);
                 border-radius: var(--border-radius);
                 font-size: var(--font-size-profetion);
-                color: var(--color-900);
+                color: var(--clr-90);
                 cursor: pointer;
                 transition: all .2s;
             }
             #cta:hover {
-                background-color: var(--color-500);
+                background-color: var(--clr-50);
             }
         }
     }

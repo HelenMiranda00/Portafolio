@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/root.css">
+    <link rel="stylesheet" href="./style/parallax.css">
     <link rel="stylesheet" href="./style/home.css">
     <link rel="stylesheet" href="./style/about.css">
     <link rel="stylesheet" href="./style/portafolio.css">
@@ -31,7 +32,7 @@
                 </ul>
             </nav>
         </header>
-        
+
         <header class="header-mobile">
             <nav class="nav-mobile">
                 <div class="name-icon">
@@ -71,7 +72,7 @@
             <figure>
                 <img src="../asset/img/profile/p-1.webp" alt="imagen de la fotografa Helen miranda">
             </figure>
-            
+
             <div class="about-content">
                 <hgroup class="tittle">
                     <h2>Sobre mi</h2>
@@ -86,52 +87,20 @@
 
         <!-- Portafolio Section-->
         <section class="section" id="portafolio">
+            <!-- titulo de la seccion -->
             <hgroup class="tittle">
                 <h2>Portafolio</h2>
             </hgroup>
-            
+            <!-- botones del filtro -->
             <div id="filter-box">
                 <button type="button" id="btn-type-1" class="btn-filter">type name-1</button>
                 <button type="button" id="btn-type-2" class="btn-filter">Type name-2</button>
                 <button type="button" id="btn-type-3" class="btn-filter">Type name-3</button>
+                <button type="button" id="btn-type-4" class="btn-filter">Type name-4</button>
+                <button type="button" id="btn-type-5" class="btn-filter">Type name-5</button>
             </div>
-            
-            <div class="portafolio-content">
-                <div class="slide animate">
-                    <figure>
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    </figure>
-                    <img class="img-vertical img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    <figure>
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    </figure>
-                </div>
-            
-                <div class="slide">
-                    <figure>
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    </figure>
-                    <img class="img-vertical img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    <figure>
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    </figure>
-                </div>
-            
-                <div class="slide">
-                    <figure>
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    </figure>
-                    <img class="img-vertical img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    <figure>
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                        <img class="img-horizontal img-portafolio" src="./asset/img/americanaConejita1.jpeg" alt="" loading="lazy">
-                    </figure>
-                </div>
+            <!-- imagenes filtradas -->
+            <div class="portafolio-content" id="container-slide"></div>
         </section>
 
         <!-- Testimonial Section-->
@@ -171,7 +140,7 @@
             <hgroup class="tittle">
                 <h2>Contacto</h2>
             </hgroup>
-        </section>    
+        </section>
     </main>
     <script type="module" src="./main.js"></script>
     <script type="module" src="./js/menuMobile.js"></script>

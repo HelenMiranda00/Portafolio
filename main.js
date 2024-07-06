@@ -1,6 +1,8 @@
 // AGREGAR SECCIONES Y ANIMARLAS AL HACER SCROLL.
-// Nombres y Ruta de archivos html relativos al archivo 'index.html'
-import { removeClassIfExists, verifyAndAddClass } from './js/utils.js'
+// Nombres y Ruta de archivos html relativos al archivo 'index.html'.
+import { createCard, imgOnLoad, generatePortfolio } from './js/createCard.js'
+import { image } from './js/imgUrl.js';
+
 const files = [
     [
         'about',
@@ -45,4 +47,6 @@ const sections = document.querySelectorAll('.section');
 sections.forEach(section => {
     section.classList.add('fade-enter');
     observer.observe(section);
+    if ( section.id === 'portafolio') generatePortfolio(); // Llamar a la función para generar las imagenes del portafolio.
 });
+
