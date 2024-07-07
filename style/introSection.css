@@ -1,0 +1,70 @@
+/* Estilos para la sección introductoria */
+.intro-section {
+    background-color: var(--clr-secundario-00);
+    padding: var(--large-padding);
+    text-align: center;
+}
+
+.intro-section .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--clr-90);
+}
+
+.intro-section h2 {
+    font-family: var(--font-family-tittle);
+    font-size: var(--font-size-tittle);
+    color: var(--clr-100);
+    margin-bottom: var(--space-between-element);
+}
+
+.intro-section p {
+    font-family: var(--font-family-text);
+    font-size: 1.2rem;
+    color: var(--clr-80);
+    margin-bottom: var(--space-between-element);
+}
+
+.intro-section p strong {
+    font-size: 1.3rem;
+    display: block;
+    margin-top: var(--space-between-element);
+    color: var(--clr-90);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 2rem;
+    }
+
+    .intro-section h2 {
+        font-size: 4rem;
+    }
+
+    .intro-section p {
+        font-size: 1rem;
+    }
+
+    .intro-section p strong {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section {
+        padding: 1rem;
+    }
+
+    .intro-section h2 {
+        font-size: 3rem;
+    }
+
+    .intro-section p {
+        font-size: 0.9rem;
+    }
+
+    .intro-section p strong {
+        font-size: 1rem;
+    }
+}

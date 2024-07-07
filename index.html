@@ -4,10 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style/root.css">
-    <link rel="stylesheet" href="./style/parallax.css">
     <link rel="stylesheet" href="./style/home.css">
     <link rel="stylesheet" href="./style/about.css">
+    <link rel="stylesheet" href="./style/introSection.css">
     <link rel="stylesheet" href="./style/portafolio.css">
     <link rel="stylesheet" href="./style/feedback.css">
     <link rel="stylesheet" href="./style/footer.css">
@@ -23,7 +33,7 @@
         <header class="header-desktop">
             <nav class="nav">
                 <div class="name-icon">
-                    <a href="#about">H. Miranda</a>
+                    <a href="#about">H|M</a>
                 </div>
                 <ul>
                     <li><a href="#about" id="nav-about">About me</a></li>
@@ -67,23 +77,46 @@
     </section>
 
     <main class="container-all" id="App">
+
         <!-- About Section -->
         <section class="section" id="about">
             <figure>
-                <img src="../asset/img/profile/p-1.webp" alt="imagen de la fotografa Helen miranda">
+                <img src="./assets/img/profile/p-1.webp" alt="Imagen de la fotógrafa Helen Miranda">
             </figure>
 
             <div class="about-content">
-                <hgroup class="tittle">
-                    <h2>Sobre mi</h2>
+                <hgroup class="title">
+                    <h2>Capturando la belleza en cada momento</h2>
                 </hgroup>
-                <aside class="des">
-                    <p>parrafo</p>
-                    <p>parrafo</p>
-                    <p>parrafo</p>
+                <aside class="description">
+                    <p class="paragrahp">Siempre tuve la curiosidad de explorar el mundo a través del lente de una cámara.
+                        Cada persona que conozco y cada interacción que tengo son oportunidades únicas para capturar
+                        emociones auténticas y expresiones genuinas.</p>
+                    <p class="paragrahp">Mi estilo es una fusión de editorial y artístico, pero no me limito a una sola visión. Me inspira
+                        la singularidad de cada individuo y la magia de los momentos espontáneos.</p>
+                    <p class="paragrahp">Cuando trabajo con mis clientes, mi objetivo es hacerlos sentir cómodos y seguros. Me encanta
+                        conversar sobre diversos temas, demostrar las poses y mostrarles las fotos durante la sesión
+                        para fortalecer su confianza. Cada clic es un paso más hacia la creación de recuerdos
+                        inolvidables.</p>
                 </aside>
             </div>
         </section>
+
+
+
+        <!-- Introduction -->
+        <section class="intro-section">
+            <div class="intro-content">
+                <h2>Cada imagen cuenta una historia única</h2>
+                <p>Tu álbum de fotos no es solo una colección de imágenes; es un reflejo de momentos que vivimos y
+                    capturamos con dedicación y pasión.</p>
+                <p>Creemos en la autenticidad y la belleza natural de cada instante. Nuestro arte se basa en capturar la
+                    esencia de cada momento, en sincronía perfecta con el entorno, la emoción y la historia personal que
+                    tú nos inspiras.</p>
+                <p><strong>Explora nuestras historias y encuentra inspiración en cada detalle.</strong></p>
+            </div>
+        </section>
+
 
         <!-- Portafolio Section-->
         <section class="section" id="portafolio">
@@ -91,15 +124,6 @@
             <hgroup class="tittle">
                 <h2>Portafolio</h2>
             </hgroup>
-            <!-- botones del filtro -->
-            <div id="filter-box">
-                <button type="button" id="btn-type-1" class="btn-filter">type name-1</button>
-                <button type="button" id="btn-type-2" class="btn-filter">Type name-2</button>
-                <button type="button" id="btn-type-3" class="btn-filter">Type name-3</button>
-                <button type="button" id="btn-type-4" class="btn-filter">Type name-4</button>
-                <button type="button" id="btn-type-5" class="btn-filter">Type name-5</button>
-            </div>
-            <!-- imagenes filtradas -->
             <div class="portafolio-content" id="container-slide"></div>
         </section>
 

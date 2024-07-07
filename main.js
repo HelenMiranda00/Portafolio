@@ -46,6 +46,12 @@ const observer = new IntersectionObserver((entries, observer) => {
 const sections = document.querySelectorAll('.section');
 sections.forEach(section => {
     section.classList.add('fade-enter');
+    if (section.id === 'about') {
+        const p_list = document.querySelectorAll('.paragrahp');
+        p_list.forEach(p => {
+            p.style.animationName = 'slideIn';
+        })
+    }
     observer.observe(section);
     if ( section.id === 'portafolio') generatePortfolio(); // Llamar a la función para generar las imagenes del portafolio.
 });

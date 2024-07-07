@@ -2,6 +2,10 @@
 
     .tittle {
         margin-bottom: var(--space-between-element);
+
+        h2 {
+            text-align: center;
+        }
     }
 
     #filter-box {
@@ -9,50 +13,47 @@
         justify-content: center;
         gap: calc(var(--space-between-element)*2);
         margin-bottom: var(--space-between-element);
-
-        .btn-filter {
-            background-color: var(--clr-30);
-            padding: var(--space-between-element);
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-filter:hover {
-            background-color: var(--clr-50);
-        }
     }
 
     .portafolio-content {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: calc(var(--space-between-element)/2);
-        height: 100%;
+        height: 70%;
 
         .slide {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
             overflow: hidden;
-            width: 9%;
-            height: 100%;
-            border-radius: var(--border-radius);
+            width: 15%;
+            margin: 0 var(--space-between-element);
             transition: all 1.5s;
 
+            .btn-filter {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 8rem;
+                background-color: var(--clr-00);
+                padding: var(--padding-containers);
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            .btn-filter:hover {
+                background-color: var(--clr-40);
+            }
 
             figure {
-                /* position: relative; */
+                position: relative;
                 overflow: hidden;
-                margin: var(--space-between-element);
-                border-radius: var(--border-radius);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
-                height: auto;
-                max-width: 100%;
                 transition: transform 0.3s ease-in-out;
 
                 img {
@@ -60,8 +61,22 @@
                     width: 100%;
                     height: auto;
                     object-fit: cover;
-                    border-radius: var(--border-radius);
-                    transition: transform 0.3s ease-in-out;
+                    transition: transform .3s ease-in-out;
+                }
+
+                .description {
+                    padding: var(--padding-containers);
+                    margin-left: calc(var(--space-between-element)* 5);
+                    height: 18rem;
+                    width: 17rem;
+                    border: solid 1px var(--clr-20);
+                    border-left: 0;
+                    border-right: 0;
+                    /* border-top: 0; */
+                    opacity: 0;
+                    transform: translateX(20rem);
+                    z-index: -10;
+                    transition: opacity 0.5s ease-in, transform .5s ease-in;
                 }
 
                 .img-vertical {
@@ -69,8 +84,7 @@
                 }
 
                 .img-horizontal {
-                    width: 16.25rem;
-                    aspect-ratio: 1.2;
+                    width: 20rem;
                 }
             }
 
@@ -78,17 +92,29 @@
 
         .animate {
             animation: expandSlowly 2s forwards;
-            border-radius: var(--border-radius);
-            align-items: flex-start;
-            
+
             & figure {
                 display: flex;
-                flex-wrap: wrap;
-                gap: calc(var(--space-between-element)/2);
+                justify-content: center;
+                align-items: center;
 
                 img:hover {
-                    transform: scale(.9);
-                    border-radius: var(--border-radius);
+                    transform: scale(1.1);
+                }
+
+                .description {
+                    height: 100%;
+                    transition-delay: 1s;
+                    opacity: 1;
+                    transform: translateY(0rem);
+                    z-index: 0;
+
+                    .cta-SeeMorePhoto {
+                        margin: var(--space-between-element);
+                        padding: 0.5rem var(--padding-containers);
+                        background-color: var(--clr-20);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -101,7 +127,7 @@
 
 @keyframes expandSlowly {
     from {
-        width: 6%;
+        width: 15%;
     }
 
     to {
@@ -115,7 +141,7 @@
     }
 
     to {
-        width: 6%;
+        width: 15%;
     }
 }
 
@@ -133,6 +159,7 @@
                     width: 100%;
                     margin: 10px 0;
                 }
+
                 & img {
                     width: 100%;
                 }
