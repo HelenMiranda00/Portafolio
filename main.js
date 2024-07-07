@@ -52,7 +52,8 @@ sections.forEach(section => {
             p.style.animationName = 'slideIn';
         })
     }
-    observer.observe(section);
+    
     if ( section.id === 'portafolio') generatePortfolio(); // Llamar a la función para generar las imagenes del portafolio.
+    observer.observe(section);
 });
 
