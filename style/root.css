@@ -11,6 +11,9 @@
     --clr-90: #533630;
     --clr-100: #2f1b19;
 
+    --bg-1: #100909;
+    --bg-2: #0a0606;
+
     /* general style */
 
     --font-family-tittle: "Bodoni Moda SC", serif; /* bodoni-moda-sc */
@@ -19,7 +22,6 @@
     --font-weight: weight;
     --font-style: normal;
 
-    --bg-color-web: var(--clr-00);
     --font-size-tittle: 5vw;
     --font-size-profetion: 2vw;
     --padding-containers: 1rem;
@@ -66,28 +68,34 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    background-color: var(--bg-1);
 
-    h1,h2,h3,h4,h5,h6{font-family: var(--font-family-tittle);}
+    h1,h2,h3,h4,h5,h6{
+        font-family: var(--font-family-tittle);
+        font-size: 3rem;
+        color: var(--clr-80);
+    }
 }
 
 .container-all {
     height: 100vh;
     width: 100%;
-    background-color: var(--bg-color-web);
 
     .section {
         height: 100vh;
         width: 100%;
         margin-bottom: 4rem;
-        padding: var(--padding-containers);
         transition: all .8s ease-in-out;
     }
 
     .fade-enter {
         opacity: 0;
+        transform-origin: top;
+        transform: scale(0.9);
     }
 
     .fade-enter-active {
         opacity: 1;
+        transform: scale(1);
     }
 }

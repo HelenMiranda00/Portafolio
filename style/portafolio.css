@@ -32,19 +32,25 @@
             margin: 0 var(--space-between-element);
             transition: all 1.5s;
 
-            .btn-filter {
+            .btn {
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 1;
-                width: 8rem;
-                background-color: var(--clr-00);
+                width: 7rem;
                 padding: var(--padding-containers);
+                color: var(--clr-80);
+                font-weight: bold;
                 cursor: pointer;
-                transition: background-color 0.3s ease;
+                animation: scale-letter 12s infinite linear;
+                transition: background 10s;
+                transform-origin: left;
             }
-    
-            .btn-filter:hover {
+
+            .cta-SeeMorePhoto {
+                display: none;
+                width: 8rem;
+                text-align: center;
                 background-color: var(--clr-40);
             }
 
@@ -61,7 +67,7 @@
                     width: 100%;
                     height: auto;
                     object-fit: cover;
-                    transition: transform .3s ease-in-out;
+                    transition: width .5s ease-in-out;
                 }
 
                 .description {
@@ -72,7 +78,6 @@
                     border: solid 1px var(--clr-20);
                     border-left: 0;
                     border-right: 0;
-                    /* border-top: 0; */
                     opacity: 0;
                     transform: translateX(20rem);
                     z-index: -10;
@@ -84,7 +89,8 @@
                 }
 
                 .img-horizontal {
-                    width: 20rem;
+                    width: 7rem;
+                    height: 25rem;
                 }
             }
 
@@ -98,29 +104,31 @@
                 justify-content: center;
                 align-items: center;
 
-                img:hover {
-                    transform: scale(1.1);
+                & .img-horizontal {
+                    width: 20rem;
                 }
 
                 .description {
                     height: 100%;
+                    color: var(--clr-40);
                     transition-delay: 1s;
                     opacity: 1;
                     transform: translateY(0rem);
                     z-index: 0;
-
-                    .cta-SeeMorePhoto {
-                        margin: var(--space-between-element);
-                        padding: 0.5rem var(--padding-containers);
-                        background-color: var(--clr-20);
-                        cursor: pointer;
-                    }
                 }
+            }
+            & .btn {
+                display: none;
+                animation: none;
+            }
+            & .cta-SeeMorePhoto {
+                display: block;
             }
         }
 
         .close-animate {
             animation: collapseSlowly 2s forwards;
+            color: var(--clr-40);
         }
     }
 }
@@ -142,6 +150,18 @@
 
     to {
         width: 15%;
+    }
+}
+
+@keyframes scale-letter {
+
+    0%,100% {
+        background-color: var(--clr-20);
+        color: var(--clr-40);
+    }
+    10%, 90%  {
+        background-color: var(--clr-40);
+        color: var(--clr-20);
     }
 }
 

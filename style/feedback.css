@@ -10,9 +10,8 @@
         align-content: center;
         justify-content: center;
         align-items: center;
-        margin: 0rem var(--large-padding);
-        background-color: var(--clr-30);
-        border-radius: var(--border-radius);
+        width: 100%;
+        background-color: var(--clr-60);
 
         .box {
             display: flex;

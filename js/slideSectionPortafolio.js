@@ -1,6 +1,6 @@
 // animacion para los slide del portafolio
 document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.btn-filter');
+    const filterButtons = document.querySelectorAll('.btn-photo');
     const slides = document.querySelectorAll('.slide');
 
     filterButtons.forEach((button, index) => {

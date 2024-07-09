@@ -1,22 +1,10 @@
 // AGREGAR SECCIONES Y ANIMARLAS AL HACER SCROLL.
-// Nombres y Ruta de archivos html relativos al archivo 'index.html'.
-import { createCard, imgOnLoad, generatePortfolio } from './js/createCard.js'
-import { image } from './js/imgUrl.js';
-
-const files = [
-    [
-        'about',
-        'portafolio',
-        'feedback',
-        'contact',
-    ],
-    [
-        './html/about.html',
-        './html/portafolio.html',
-        './html/feedback.html',
-        './html/contact.html',
-    ]
-];
+const animateSpanInAbout = () => {
+    const paragrahpList = document.querySelectorAll('.paragrahp');
+    paragrahpList.forEach(span => {
+        span.style.animationName = 'showText';
+    });
+}
 
 // opciones para el observador
 const options = {
@@ -24,7 +12,6 @@ const options = {
     threshold: 0.25,
     rootMargin: '0px'
 };
-
 // iniciar el observador para cada seccion, 
 // verificar cada seccion e inyectarle el archivo html respectivamente,
 // animacion:
@@ -36,6 +23,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         if (entry.isIntersecting) {
             entry.target.classList.remove('fade-enter');
             entry.target.classList.add('fade-enter-active');
+            if (entry.target.id === 'about') animateSpanInAbout();
             observer.unobserve(entry.target);
         };
     });
@@ -46,14 +34,5 @@ const observer = new IntersectionObserver((entries, observer) => {
 const sections = document.querySelectorAll('.section');
 sections.forEach(section => {
     section.classList.add('fade-enter');
-    if (section.id === 'about') {
-        const p_list = document.querySelectorAll('.paragrahp');
-        p_list.forEach(p => {
-            p.style.animationName = 'slideIn';
-        })
-    }
-    
-    if ( section.id === 'portafolio') generatePortfolio(); // Llamar a la función para generar las imagenes del portafolio.
     observer.observe(section);
 });
-
