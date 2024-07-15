@@ -5,6 +5,7 @@
 
         h2 {
             text-align: center;
+            color: var(--clr-80);
         }
     }
 
@@ -73,7 +74,7 @@
                 .description {
                     padding: var(--padding-containers);
                     margin-left: calc(var(--space-between-element)* 5);
-                    height: 18rem;
+                    height: 100%;
                     width: 17rem;
                     border: solid 1px var(--clr-20);
                     border-left: 0;
@@ -110,7 +111,7 @@
 
                 .description {
                     height: 100%;
-                    color: var(--clr-40);
+                    color: var(--clr-90);
                     transition-delay: 1s;
                     opacity: 1;
                     transform: translateY(0rem);

@@ -1,6 +1,5 @@
 /* Estilos para la sección introductoria */
 .intro-section {
-    background-color: var(--clr-secundario-00);
     padding: var(--large-padding);
     text-align: center;
     
@@ -11,14 +10,14 @@
         & h2 {
            font-family: var(--font-family-tittle);
            font-size: var(--font-size-tittle);
-           color: var(--clr-80);
+           color: var(--clr-60);
            margin-bottom: var(--space-between-element);
         }
         
         & p {
            font-family: var(--font-family-text);
            font-size: 1.2rem;
-           color: var(--clr-60);
+           color: var(--clr-50);
            margin-bottom: var(--space-between-element);
 
            & strong {
@@ -26,7 +25,7 @@
               display: block;
               margin-top: var(--space-between-element);
               margin-top: calc(var(--space-between-element)* 3);
-              color: var(--clr-40);
+              color: var(--clr-80);
             }
         }
     }
