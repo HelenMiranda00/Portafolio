@@ -6,6 +6,7 @@
 
     .tittle {
         padding: var(--large-padding);
+        padding-top: 0;
 
         h2 {
             color: var(--clr-70);

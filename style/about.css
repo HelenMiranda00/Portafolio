@@ -21,7 +21,7 @@
     }
 
     .about-content {
-        padding: var(--large-padding);
+        padding: 2.6rem;
 
         .title {
             margin-bottom: var(--space-between-element);
