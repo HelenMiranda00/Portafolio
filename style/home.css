@@ -72,10 +72,7 @@
         }
     }
 
-    .header-mobile {
-        display: none;
-    }
-
+    .header-mobile,
     #menu-mobile {
         display: none;
     }
