@@ -62,7 +62,9 @@
 
 @media (max-width: 768px) {
     #about {
+        height: 100%;
         flex-direction: column;
+        justify-content: space-between;
 
         figure,
         .about-content {
