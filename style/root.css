@@ -39,8 +39,7 @@
     --cta-color: var(--clr-90);
 
     /* mobile menu */
-    --bg-mobile-menu: var(--clr-60);
-    --bg-mobile-nav: transparent;
+    --bg-mobile-menu: rgba(101, 68, 34, 0.866);
 }
 
 *,

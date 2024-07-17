@@ -101,8 +101,11 @@ export function autoSize(targetElement) {
     targetElement.style.width = width + 'rem';
     targetElement.style.height = height + 'rem';
 }
-
-// Funcion para verificar si el elemento esta en el Viewport
+/**
+ * Funcion para verificar si el elemento esta en el Viewport
+ * @param {string} element - El elemento a verificar 
+ * @returns {bulean} - devuelve true si el elemento esta visible y false si no.
+ */
 export function isElementInViewport(element) {
     // obtenemos las dimenciones del elemento html
     let rect = element.getBoundingClientRect();

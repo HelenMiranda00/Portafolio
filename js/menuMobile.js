@@ -1,15 +1,35 @@
-const btn_Menu = document.getElementById('button-menu');
+import {isElementInViewport} from './utils.js';
+const btnMenu = document.getElementById('button-menu');
+const menuMobile = document.getElementById('menu-mobile');
 
-btn_Menu.addEventListener('click', () => {
+btnMenu.addEventListener('click', () => {
+    
+    const [...spanList] = btnMenu.children;
+    if (isElementInViewport(menuMobile)) {
+        btnMenu.style.gap = '0.3rem';
+        spanList.forEach(span => {
+            span.style.opacity = 1;
+            span.style.transform = 'rotateZ(0)'
+        })
 
-    if (btn_Menu.children[2].classList.contains('open-menu')) {
-       
-        btn_Menu.children[0].classList.remove('span-1');
-        btn_Menu.children[1].classList.remove('span-2');
-        btn_Menu.children[2].classList.remove('open-menu');
+        menuMobile.style.transform = 'translateX(-105%)';
+        
     } else {
-        btn_Menu.children[2].classList.add('open-menu');
-        btn_Menu.children[0].classList.add('span-1');
-        btn_Menu.children[1].classList.add('span-2');
+        btnMenu.style.gap = 0;
+    
+        spanList.forEach((span, index) => {
+            if(index === 0) {
+              span.style.transform = 'rotateZ(45deg) translateY(3px)';
+            }
+            if(index === 1) {
+                span.style.transform = 'rotateZ(-45deg)';
+            }
+            if(index === 2) {
+                span.style.opacity = 0;
+            }
+        });
+        
+        menuMobile.style.transform = 'translateX(0)';
+
     }
 });
