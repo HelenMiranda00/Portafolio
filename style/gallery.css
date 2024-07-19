@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--clr-100);
+}
+
+#header-gallery {
+    background: var(--clr-100);
+    color: var(--clr-20);
+    padding: 1em;
+    margin-top: 4rem;
+    text-align: center;
+
+    h1,
+    nav {
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        text-align: center;
+
+        li {
+            display: inline;
+            padding: 0.5rem;
+
+            button {
+                background: var(--clr-60);
+                color: var(--clr-20);
+                cursor: pointer;
+                padding: 1rem;
+                transition: background 0.3s ease;
+            }
+
+            button:hover {
+                background: var(--clr-40);
+            }
+        }
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        gap: 1rem;
+        grid-auto-flow: dense;
+        opacity: 0;
+        transition: opacity 0.7s, transform 0.7s;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+
+    }
+
+    .hidden {
+        transform: scale(0.8);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .active {
+        transform: scale(1);
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: none;
+    background-color: var(--clr-100);
+    color: var(--clr-40);
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px var(--clr-40);
+    transition: opacity 0.3s;
+    z-index: 1000;
+
+    svg {
+        fill: var(--clr-20);
+        width: 24px;
+        height: 24px;
+    }
+}
+
+#scrollToTopBtn.show {
+    display: block;
+}
+
+/* Para dispositivos pequeños (móviles) */
+@media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    main {
+
+        .container {
+            grid-template-columns: 1fr;
+            grid-gap: 0.5rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+}
+
+/* Para dispositivos medianos (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

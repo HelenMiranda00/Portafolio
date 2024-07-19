@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Fotos</title>
+    <link rel="stylesheet" href="../style/root.css">
+    <link rel="stylesheet" href="../style/gallery.css">
+    <link rel="stylesheet" href="../style/headers.css">
+</head>
+
+<body>
+    <!-- Header Mobile -->
+    <header class="header-mobile">
+        <div class="name-icon">
+            <div>H|M</div>
+        </div>
+        <div id="open-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#aaa">
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+            </svg>
+        </div>
+    </header>
+    <!-- Menu Mobile -->
+    <div id="menu-mobile">
+        <div id="close-menu">
+            <div>H|M</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#aaa">
+                <path
+                    d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
+            </svg>
+        </div>
+        <ul>
+            <li><a href="../index.html#home">Inicio</a></li>
+            <li><a href="../index.html#about">Sobre mi</a></li>
+            <li><a href="../index.html#feedback">Feedback</a></li>
+            <li><a href="../index.html#contact">Contacto</a></li>
+        </ul>
+        <div class="social-media-icons">
+            <a target="_blank" rel="noopener" href="https://www.instagram.com/helentmiranda/" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z" />
+                    <circle cx="11.994" cy="11.979" r="3.003" />
+                </svg>
+            </a>
+            <a target="_blank" rel="noopener" href="https://www.facebook.com" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <header class="header-desktop">
+        <nav class="nav">
+            <div class="name-icon">
+                <a href="../index.html#home">H|M</a>
+            </div>
+            <ul>
+                <li><a href="../index.html#home" id="nav-home">Inicio</a></li>
+                <li><a href="../index.html#about" id="nav-about">Sobre mi</a></li>
+                <li><a href="../index.html#portafolio" id="nav-portafolio">Portafolio</a></li>
+                <li><a href="../index.html#feedback" id="nav-feedback">Feedback</a></li>
+                <li><a href="../index.html#contact" id="nav-contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="header-gallery">
+        <h1>Galería de Retratos</h1>
+        <nav>
+            <ul>
+                <li><button id="filter-retrato-1" type="button">Retrato - 1</button></li>
+                <li><button id="filter-retrato-2" type="button">Retrato - 2</button></li>
+                <li><button id="filter-retrato-3" type="button">Retrato - 3</button></li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <div class="container active" id="container-1"></div>
+        <div class="container hidden" id="container-2"></div>
+        <div class="container hidden" id="container-3"></div>
+    </main>
+    <button type="button" title="boton" id="scrollToTopBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="m12 6.879-7.061 7.06 2.122 2.122L12 11.121l4.939 4.94 2.122-2.122z"></path>
+        </svg>
+    </button>
+    <script type="module" src="../js/gallery.js"></script>
+    <script type="module" src="../js/menuMobile.js"></script>
+</body>
+
+</html>

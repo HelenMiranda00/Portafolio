@@ -15,7 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style/root.css">
-    <link rel="stylesheet" href="./style/headerMobile.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/headers.css">
     <link rel="stylesheet" href="./style/home.css">
     <link rel="stylesheet" href="./style/about.css">
     <link rel="stylesheet" href="./style/introSection.css">
@@ -37,7 +38,6 @@
             </svg>
         </div>
     </header>
-
     <div id="menu-mobile">
         <div id="close-menu">
             <div>H|M</div>
@@ -47,9 +47,11 @@
             </svg>
         </div>
         <ul>
+            <li><a href="#home">Inicio</a></li>
             <li><a href="#about">Sobre mi</a></li>
-            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="./html/gallery.html">Portafolio</a></li>
             <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
         <div class="social-media-icons">
             <a target="_blank" rel="noopener" href="https://www.instagram.com/helentmiranda/" aria-label="Instagram">
@@ -68,6 +70,21 @@
             </a>
         </div>
     </div>
+    <!-- Header Desktop -->
+    <header class="header-desktop">
+        <nav class="nav">
+            <div class="name-icon">
+                <a href="#about">H|M</a>
+            </div>
+            <ul>
+                <li><a href="#home" id="nav-home">Inicio</a></li>
+                <li><a href="#about" id="nav-about">Sobre mi</a></li>
+                <li><a href="#portafolio" id="nav-portafolio">Portafolio</a></li>
+                <li><a href="#feedback" id="nav-feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <!-- Home Section -->
     <section id="home">
 
@@ -83,51 +100,45 @@
                     <figure>
                         <img src="./assets/img/retrato/retrato-group-1/retrato-02.jpg" alt="">
                         <figcaption>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z">
-                                </path>
-                            </svg>
+                            <a href="./html/gallery.html#filter-retrato-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z">
+                                    </path>
+                                </svg>
+                            </a>
                         </figcaption>
                     </figure>
                     <!-- photo 2 -->
                     <figure>
                         <img src="./assets/img/retrato/retrato-group-5/retrato-04.jpg" alt="">
                         <figcaption>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z">
-                                </path>
-                            </svg>
+                            <a href="./html/gallery.html#filter-retrato-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z">
+                                    </path>
+                                </svg>
+                            </a>
                         </figcaption>
                     </figure>
                     <!-- photo 3 -->
                     <figure>
                         <img src="./assets/img/retrato/retrato-group-4/retrato-03.jpg" alt="">
                         <figcaption>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path
+                            <a href="./html/gallery.html#filter-retrato-2">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
                                     d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z">
                                 </path>
                             </svg>
+                        </a>
                         </figcaption>
                     </figure>
                 </div>
             </section>
         </div>
-
-        <header class="header-desktop">
-            <nav class="nav">
-                <div class="name-icon">
-                    <a href="#about">H|M</a>
-                </div>
-                <ul>
-                    <li><a href="#about" id="nav-about">About me</a></li>
-                    <li><a href="#portafolio" id="nav-portafolio">Portafolio</a></li>
-                    <li><a href="#feedback" id="nav-feedback">Feedback</a></li>
-                </ul>
-            </nav>
-        </header>
 
         <aside class="presentation">
             <hgroup class="name">
@@ -202,6 +213,7 @@
                 <h2>Portafolio</h2>
             </hgroup>
             <div class="portafolio-content" id="container-slide">
+                <!-- Retrato-1 -->
                 <div class="slide animate">
                     <figure class="figure-content"><img src="./assets/img/retrato/retrato-group-1/retrato-00.jpg"
                             alt="Retrato de chica de medio cuerpo con traje rojo, manos en la cabeza, fondo marrón y rojo vino"
@@ -213,9 +225,10 @@
                             cada detalle.
                     </figure>
                     </figcaption>
-                    <a class="cta-SeeMorePhoto btn" href="#">Ver Fotos</a>
+                    <a class="cta-SeeMorePhoto btn" href="./html/gallery.html#filter-retrato-1">Ver Fotos</a>
                     <button type="button" class="btn btn-photo">Nombre-id</button>
                 </div>
+                <!-- Retrato-2 -->
                 <div class="slide">
                     <figure class="figure-content"><img src="./assets/img/retrato/retrato-group-2/retrato-00.jpg"
                             alt="Chica de perfil con vestido blanco y hojas azules en un parque, brazo posado en el vientre"
@@ -227,9 +240,10 @@
                             elegancia.
                     </figure>
                     </figcaption>
-                    <a class="cta-SeeMorePhoto btn" href="#">Ver Fotos</a>
+                    <a class="cta-SeeMorePhoto btn" href="./html/gallery.html#filter-retrato-2">Ver Fotos</a>
                     <button type="button" class="btn btn-photo">-NombreID-</button>
                 </div>
+                <!-- retrato-3 -->
                 <div class="slide">
                     <figure class="figure-content"><img src="./assets/img/retrato/retrato-group-3/retrato-00.jpg"
                             alt="Chica latina de perfil con top caqui pastel, brazos cruzados, rostro inclinado hacia la cámara con ojos cerrados, fondo verde difuminado y rocas grises"
@@ -241,9 +255,10 @@
                             natural.
                         </figcaption>
                     </figure>
-                    <a class="cta-SeeMorePhoto btn" href="#">Ver Fotos</a>
+                    <a class="cta-SeeMorePhoto btn" href="./html/gallery.html#filter-retrato-2">Ver Fotos</a>
                     <button type="button" class="btn btn-photo">-NombreID-</button>
                 </div>
+                <!-- Retrato-4 -->
                 <div class="slide">
                     <figure class="figure-content"><img src="./assets/img/retrato/retrato-group-4/retrato-00.jpg"
                             alt="Acercamiento de chica con rasgos indígenas, con vestido color pastel, apoyada en una raíz de árbol, mirando hacia arriba, fondo natural difuminado"
@@ -255,9 +270,10 @@
 
                         </figcaption>
                     </figure>
-                    <a class="cta-SeeMorePhoto btn" href="#">Ver Fotos</a>
+                    <a class="cta-SeeMorePhoto btn" href="./html/gallery.html#filter-retrato-2">Ver Fotos</a>
                     <button type="button" class="btn btn-photo">-Alanys-</button>
                 </div>
+                <!-- Retrato-5 -->
                 <div class="slide">
                     <figure class="figure-content"><img src="./assets/img/retrato/retrato-group-5/retrato-00.jpg"
                             alt="Chica latina con vestuario de heavy metal, sentada sobre una bocina, tocando una guitarra negra, mirando la guitarra, fondo blanco y celeste"
@@ -268,7 +284,7 @@
                             rebelde. Cada foto es un tributo a la energía y la pasión de la música.
                         </figcaption>
                     </figure>
-                    <a class="cta-SeeMorePhoto btn" href="#">Ver Fotos</a>
+                    <a class="cta-SeeMorePhoto btn" href="./html/gallery.html#filter-retrato-3">Ver Fotos</a>
                     <button type="button" class="btn btn-photo">-Ana Laura-</button>
                 </div>
             </div>
@@ -328,17 +344,17 @@
                     </div>
                 </div>
                 <div class="contact-item">
-                    <h3>Páginas</h3>
+                    <h3>Secciones</h3>
                     <ul class="pages-list">
                         <li><a href="#home">Inicio</a></li>
-                        <li><a href="#portafolio">Portafolio</a></li>
                         <li><a href="#about">Sobre Mi</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
                         <li><a href="#feedback">Feedback</a></li>
                     </ul>
                 </div>
                 <div class="contact-item">
                     <h3>Contacto</h3>
-                    <p><a href="mailto:helen@example.com">helen@example.com</a></p>
+                    <p><a href="mailto:helen@example.com">helen@?????.com</a></p>
                 </div>
             </div>
             <p class="copy">&copy; 2024 Helen Miranda. Todos los derechos reservados.</p>

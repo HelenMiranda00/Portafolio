@@ -4,6 +4,58 @@ body {
     #menu-mobile {
         display: none;
     }
+
+    .header-desktop {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: var(--padding-containers);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
+
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .name-icon a {
+                color: var(--clr-50);
+                cursor: pointer;
+                transition: all .1s;
+            }
+
+            .name-icon a:hover {
+                color: var(--clr-30);
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 1rem;
+
+            li {
+                transition: all .1s;
+                color: var(--clr-50);
+            }
+
+            li:hover {
+                color: var(--clr-30);
+            }
+        }
+
+        ul,
+   
+        li,
+        a {
+            cursor: pointer;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -21,9 +73,9 @@ body {
             top: 0;
             height: 5vh;
             width: 100%;
-            padding: 0.5rem 1rem;
-            backdrop-filter: blur(0.5rem);
-            -webkit-backdrop-filter: blur(0.5rem);
+            padding: 2rem 1rem;
+            backdrop-filter: blur(0.3rem);
+            -webkit-backdrop-filter: blur(0.3rem);
             z-index: 1000;
             display: flex;
             justify-content: space-between;
@@ -38,11 +90,11 @@ body {
 
             /* Button Menu */
             #open-menu {
-                transition: opacity .3s;
                 opacity: 1;
                 display: flex;
                 align-items: center;
                 background-color: var(--clr-80);
+                transition: opacity .3s;
 
                 svg {
                     width: 2.5rem;
@@ -75,8 +127,8 @@ body {
                 justify-content: space-around;
                 align-items: center;
                 padding-top: 1rem;
-                transition: opacity .3s;
                 opacity: 1;
+                transition: opacity .3s;
 
                 div {
                     color: var(--clr-20);

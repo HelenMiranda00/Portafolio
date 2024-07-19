@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuMobile = document.getElementById('menu-mobile');
     const btnOpenMenu = document.getElementById('open-menu');
     const btnCloseMenu = document.getElementById('close-menu');
+    
     function timeOut(elementVisible, elementHidden) {
         setTimeout(function(){
             elementVisible.style.opacity = 0;

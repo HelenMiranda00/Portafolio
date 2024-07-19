@@ -7,70 +7,17 @@
     height: 100vh;
     width: 100%;
     margin: auto;
+    background-image: url(../assets/img/bg-desktop/bg-pc-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    .portada-home {
-        height: 100vh;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        position: absolute;
-        background-image: url(../assets/img/bg-desktop/bg-pc-2.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-        .portafolio-mobile {
-            display: none;
-        }
+    /* Se oculta la seccion de portafolio version mobile */
+    .portafolio-mobile {
+        display: none;
     }
-
-    .header-desktop {
-        width: 100%;
-        padding: var(--padding-containers);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-
-        nav {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .name-icon a {
-                cursor: pointer;
-                transition: all .1s;
-            }
-
-            .name-icon a:hover {
-                color: var(--clr-60);
-            }
-        }
-
-        ul {
-            display: flex;
-            gap: 1rem;
-
-            li {
-                transition: all .1s;
-                transform: scale(1);
-            }
-
-            li:hover {
-                color: var(--clr-60);
-                transform: scale(1.1);
-            }
-        }
-
-        ul,
-        li,
-        a {
-            cursor: pointer;
-        }
-    }
-
+   
+    /* Nombre del fotografo */
     .presentation {
         height: 80%;
         margin: 3rem;
@@ -116,22 +63,30 @@
         align-items: center;
         justify-content: center;
         height: 95dvh;
+        width: 100%;
+        background: none;
 
+        /* imgen de home */
         .portada-home {
+            height: 100%;
             background-image: url(../assets/img/bg-mobile/bg-mo-1.webp);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             transform: scale(1.5);
             transition: transform 1.5s ease-in-out;
 
+            /* cristal oscuro */
             .portafolio-mobile {
-                width: 100vw;
-                height: 100dvh;
+                width: 100%;
+                height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background-color: rgba(0, 0, 0, 0);
                 transition: background-color 1.5s ease-in-out;
 
-
+                /* grilla de fotos de home */
                 .photos {
                     display: grid;
                     grid-template-areas:
@@ -144,23 +99,28 @@
                     transform: scale(0.5);
                     transition: all 1.5s ease-in-out;
 
+                    /* grilla 1 */
                     .name {
                         grid-area: name;
                         text-align: center;
                     }
-
+                    
+                    /* grilla 2 */
                     figure:nth-child(2) {
                         grid-area: small-1;
                     }
-
+                    
+                    /* grilla 3 */
                     figure:nth-child(3) {
                         grid-area: small-2;
                     }
-
+                    
+                    /* grilla 4 */
                     figure:nth-child(4) {
                         grid-area: large-1;
                     }
 
+                    /* boton svg para cada grilla */
                     figure {
                         position: relative;
 
@@ -173,15 +133,20 @@
                         figcaption {
                             position: absolute;
                             bottom: 1.5rem;
-                            left: 1rem;
+                            right: 1rem;
                             border: solid 1px var(--clr-20);
                             border-radius: 50%;
                             display: flex;
                             align-items: center;
                             animation: bounce 2s infinite;
 
-                            svg {
-                                fill: var(--clr-20);
+                            a {
+                                width: 1.5rem;
+                                height: 1.5rem;
+
+                                svg {
+                                    fill: var(--clr-20);
+                                }
                             }
                         }
                     }
@@ -189,27 +154,17 @@
             }
         }
 
-        .header-desktop,
-        .cta-box {
+        .presentation {
             display: none;
         }
-
-        .presentation {
-            transition: all .5s;
-
-            .name {
-                display: none;
-            }
-            .cta-box {
-                display: none;
-            }
-        }
     }
+
     .container-all {
 
         #portafolio {
             display: none;
         }
+
         .intro-section {
             display: none;
         }
@@ -220,12 +175,12 @@
 
     0%,
     100% {
-        transform: translateY(-25%) rotateZ(45deg);
+        transform: scale(1.2) rotateZ(45deg);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
 
     50% {
-        transform: translateY(0) rotateZ(45deg);
+        transform: scale(1) rotateZ(45deg);
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
