@@ -1,0 +1,121 @@
+body {
+
+    .header-mobile,
+    #menu-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 5vh;
+        /* espacio para el header mobile */
+
+        .header-desktop,
+        .cta-box {
+            display: none;
+        }
+
+        .header-mobile {
+            position: fixed;
+            top: 0;
+            height: 5vh;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            backdrop-filter: blur(0.5rem);
+            -webkit-backdrop-filter: blur(0.5rem);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--bg-mobile-menu);
+
+            .name-icon {
+                display: flex;
+                align-items: center;
+                color: var(--clr-20);
+            }
+
+            /* Button Menu */
+            #open-menu {
+                transition: opacity .3s;
+                opacity: 1;
+                display: flex;
+                align-items: center;
+                background-color: var(--clr-80);
+
+                svg {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    fill: var(--clr-20);
+                }
+            }
+        }
+
+        /* Menu */
+        #menu-mobile {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translateX(-110%);
+            width: 25vh;
+            height: 100dvh;
+            background-color: var(--bg-mobile-menu);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1000;
+            -webkit-backdrop-filter: blur(0.5rem);
+            backdrop-filter: blur(0.5rem);
+            transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+            #close-menu {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding-top: 1rem;
+                transition: opacity .3s;
+                opacity: 1;
+
+                div {
+                    color: var(--clr-20);
+                }
+
+                svg {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    fill: var(--clr-20);
+                    background-color: var(--clr-80);
+                }
+            }
+
+            ul {
+                width: 100%;
+                border-bottom: solid 2px var(--clr-20);
+                margin-bottom: 1rem;
+
+                li {
+                    margin: 2rem;
+                    color: var(--clr-30);
+                }
+            }
+
+            .social-media-icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    width: 30px;
+                    height: 30px;
+                    margin: 0 0.5rem;
+
+                    svg {
+                        fill: var(--clr-30);
+                    }
+                }
+            }
+        }
+    }
+}

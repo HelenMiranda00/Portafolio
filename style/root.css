@@ -85,9 +85,9 @@ body {
     width: 100%;
 
     .section {
-        height: 100vh;
+        height: auto;
         width: 100%;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         transition: all .8s ease-in-out;
     }
 

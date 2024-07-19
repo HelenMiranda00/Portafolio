@@ -1,35 +1,20 @@
-import {isElementInViewport} from './utils.js';
-const btnMenu = document.getElementById('button-menu');
-const menuMobile = document.getElementById('menu-mobile');
-
-btnMenu.addEventListener('click', () => {
-    
-    const [...spanList] = btnMenu.children;
-    if (isElementInViewport(menuMobile)) {
-        btnMenu.style.gap = '0.3rem';
-        spanList.forEach(span => {
-            span.style.opacity = 1;
-            span.style.transform = 'rotateZ(0)'
-        })
-
-        menuMobile.style.transform = 'translateX(-105%)';
-        
-    } else {
-        btnMenu.style.gap = 0;
-    
-        spanList.forEach((span, index) => {
-            if(index === 0) {
-              span.style.transform = 'rotateZ(45deg) translateY(3px)';
-            }
-            if(index === 1) {
-                span.style.transform = 'rotateZ(-45deg)';
-            }
-            if(index === 2) {
-                span.style.opacity = 0;
-            }
-        });
-        
-        menuMobile.style.transform = 'translateX(0)';
-
+document.addEventListener('DOMContentLoaded', function () {
+    const menuMobile = document.getElementById('menu-mobile');
+    const btnOpenMenu = document.getElementById('open-menu');
+    const btnCloseMenu = document.getElementById('close-menu');
+    function timeOut(elementVisible, elementHidden) {
+        setTimeout(function(){
+            elementVisible.style.opacity = 0;
+            elementHidden.style.opacity = 1;
+        },100)
     }
+    btnOpenMenu.addEventListener('click', function () {
+        menuMobile.style.transform = 'translateX(0)';
+        timeOut(btnOpenMenu, btnCloseMenu);
+    });
+
+    btnCloseMenu.addEventListener('click', function () {
+        menuMobile.style.transform = 'translateX(-110%)';
+        timeOut(btnCloseMenu, btnOpenMenu);
+    });
 });

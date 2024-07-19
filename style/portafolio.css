@@ -156,11 +156,11 @@
 
 @keyframes scale-letter {
 
-    0%,100% {
+    0% {
         background-color: var(--clr-20);
         color: var(--clr-40);
     }
-    10%, 90%  {
+    100%  {
         background-color: var(--clr-40);
         color: var(--clr-20);
     }
@@ -185,18 +185,9 @@
                     width: 100%;
                 }
             }
-
-            .animate {
-                animation: expandHeight 2s forwards;
-            }
-
-            .close-animate {
-                animation: collapseHeight 2s forwards;
-            }
         }
     }
 }
-
 
 @keyframes expandHeight {
     from {
