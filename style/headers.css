@@ -60,8 +60,6 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding-top: 5vh;
-        /* espacio para el header mobile */
 
         .header-desktop,
         .cta-box {
@@ -72,19 +70,21 @@ body {
             position: fixed;
             top: 0;
             height: 5vh;
-            width: 100%;
+            width: 100dvw;
             padding: 2rem 1rem;
-            backdrop-filter: blur(0.3rem);
-            -webkit-backdrop-filter: blur(0.3rem);
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(0.3rem);
+            -webkit-backdrop-filter: blur(0.3rem);
             background-color: var(--bg-mobile-menu);
 
             .name-icon {
                 display: flex;
                 align-items: center;
+                font-size: large;
                 color: var(--clr-20);
             }
 
@@ -93,13 +93,13 @@ body {
                 opacity: 1;
                 display: flex;
                 align-items: center;
-                background-color: var(--clr-80);
                 transition: opacity .3s;
 
                 svg {
                     width: 2.5rem;
                     height: 2.5rem;
                     fill: var(--clr-20);
+                    background-color: var(--clr-80);
                 }
             }
         }

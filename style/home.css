@@ -62,9 +62,11 @@
         position: relative;
         align-items: center;
         justify-content: center;
-        height: 95dvh;
+        height: 94dvh;
         width: 100%;
+        margin-top: 6vh;
         background: none;
+        overflow: hidden;
 
         /* imgen de home */
         .portada-home {
@@ -86,6 +88,7 @@
                 background-color: rgba(0, 0, 0, 0);
                 transition: background-color 1.5s ease-in-out;
 
+
                 /* grilla de fotos de home */
                 .photos {
                     display: grid;
@@ -95,6 +98,7 @@
                         'large-1 large-1'
                     ;
                     gap: 1rem;
+                    margin-top: 3.5rem;
                     opacity: 0;
                     transform: scale(0.5);
                     transition: all 1.5s ease-in-out;
@@ -123,18 +127,19 @@
                     /* boton svg para cada grilla */
                     figure {
                         position: relative;
-
+                        
                         img {
                             flex: 1;
                             object-fit: cover;
                             width: 100%;
                         }
-
+                        
                         figcaption {
                             position: absolute;
-                            bottom: 1.5rem;
-                            right: 1rem;
+                            bottom: 2rem;
+                            right: 0.7rem;
                             border: solid 1px var(--clr-20);
+                            background-color: var(--clr-80);
                             border-radius: 50%;
                             display: flex;
                             align-items: center;
