@@ -13,7 +13,7 @@ body {
     h4,
     h5,
     h6 {
-        font-family: var(--font-family-tittle);
+        font-family: var(--font-family);
         font-size: 3rem;
     }
 }

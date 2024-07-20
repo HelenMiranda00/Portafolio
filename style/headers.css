@@ -11,6 +11,7 @@ body {
         width: 100%;
         z-index: 1000;
         padding: var(--padding-containers);
+        font-family: var(--font-family);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -28,6 +29,15 @@ body {
                 color: var(--clr-50);
                 cursor: pointer;
                 transition: all .1s;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 3rem;
+                }
             }
 
             .name-icon a:hover {

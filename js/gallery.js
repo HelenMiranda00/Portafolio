@@ -1,3 +1,5 @@
+import { imgOnLoad } from "./utils.js";
+
 const portafolio = {
     retratoGroup1: [
         { src: '../assets/img/retrato/retrato-group-1/retrato-00.jpg', alt: 'Retrato de chica de medio cuerpo con traje rojo, manos en la cabeza, fondo marrón y rojo vino' },
@@ -26,18 +28,6 @@ const portafolio = {
         { src: '../assets/img/retrato/retrato-group-5/retrato-04.jpg', alt: 'Chica latina con vestuario de heavy metal, acostada mirando hacia arriba mientras le toman la foto desde arriba, apoyando su mejilla en su brazo, guitarra y bocina cerca, fondo amarillo y blanco' },
     ],
 };
-
-function imgOnLoad(url, alt = '', className = '', id = '', loading = 'lazy') {
-    const img = new Image();
-    img.src = url;
-    img.alt = alt;
-    if (className) img.className = className;
-    if (id) img.id = id;
-    img.loading = loading;
-    img.onload = () => console.log(`Imagen cargada: ${url}`);
-    img.onerror = () => console.error('Error al cargar la imagen.');
-    return img;
-}
 
 const containers = document.querySelectorAll('.container');
 

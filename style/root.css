@@ -17,9 +17,7 @@
     --bg-gradient: linear-gradient(180deg, var(--clr-90), var(--clr-80), var(--clr-60), var(--clr-50));
     /* general style */
 
-    --font-family-tittle: "Bodoni Moda SC", serif;
-    /* bodoni-moda-sc */
-    --font-family-text: "Josefin Sans", sans-serif;
+    --font-family: "Poppins", serif;
     --font-optical-sizing: auto;
     --font-weight: weight;
     --font-style: normal;

@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -10,7 +10,7 @@ body {
     background: var(--clr-100);
     color: var(--clr-20);
     padding: 1em;
-    margin-top: 4rem;
+    margin-top: 5rem;
     text-align: center;
 
     h1,

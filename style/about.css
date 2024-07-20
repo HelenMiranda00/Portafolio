@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    font-family: var(--font-family);
 
     figure,
     .about-content {

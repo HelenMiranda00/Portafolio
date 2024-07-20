@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-family);
 
     .tittle {
         padding: calc(var(--large-padding)/2);

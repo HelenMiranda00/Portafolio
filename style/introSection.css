@@ -2,20 +2,19 @@
 .intro-section {
     padding: var(--large-padding);
     text-align: center;
+    font-family: var(--font-family);
     
     & .intro-content {
         max-width: 800px;
         margin: 0 auto;
         
         & h2 {
-           font-family: var(--font-family-tittle);
-           font-size: var(--font-size-tittle);
+           font-family: var(--font-family);
            color: var(--clr-60);
            margin-bottom: var(--space-between-element);
         }
         
         & p {
-           font-family: var(--font-family-text);
            font-size: 1.2rem;
            color: var(--clr-50);
            margin-bottom: var(--space-between-element);
