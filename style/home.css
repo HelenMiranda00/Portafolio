@@ -29,11 +29,11 @@
 
         .name {
             h1 {
-                font-size: var(--font-size-tittle);
+                font-size: var(--font-size-first);
             }
 
             p {
-                font-size: var(--font-size-profetion);
+                font-size: var(--font-size-second);
             }
 
         }
@@ -44,7 +44,7 @@
                 padding: 1rem;
                 background-color: var(--clr-20);
                 border-radius: var(--border-radius);
-                font-size: var(--font-size-profetion);
+                font-size: var(--font-size-second);
                 color: var(--clr-90);
                 cursor: pointer;
                 transition: all .2s;

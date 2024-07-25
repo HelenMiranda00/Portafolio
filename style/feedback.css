@@ -45,7 +45,7 @@
                 padding: var(--space-between-element);
                 margin: var(--space-between-element) 0;
                 border-radius: var(--border-radius);
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: var(--shadow-00);
 
                 img {
                     width: 6rem;
@@ -68,7 +68,7 @@
                 }
 
                 p {
-                    font-family: var(--font-family-text);
+                    font-family: var(--font-family);
                     font-size: 1rem;
                     color: var(--clr-70);
                 }

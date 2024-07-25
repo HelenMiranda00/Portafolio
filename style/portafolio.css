@@ -23,6 +23,11 @@
         height: 100%;
         max-height: 25rem;
 
+        .slide:hover > .btn-photo {
+            background-color: var(--clr-80);
+            color: var(--clr-30);
+        }
+
         .slide {
             position: relative;
             display: flex;
@@ -45,6 +50,7 @@
                 background-color: var(--clr-30);
                 font-weight: bold;
                 cursor: pointer;
+                transition: all 0.3s ease;
             }
 
             .cta-SeeMorePhoto {

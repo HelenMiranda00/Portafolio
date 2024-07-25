@@ -15,15 +15,17 @@
     --bg-2: #0a0606;
     /* --bg-gradient: linear-gradient(45deg, #512f1c, var(--bg-1)); */
     --bg-gradient: linear-gradient(180deg, var(--clr-90), var(--clr-80), var(--clr-60), var(--clr-50));
-    /* general style */
+    --shadow-00: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
+    /* general style */
     --font-family: "Poppins", serif;
     --font-optical-sizing: auto;
     --font-weight: weight;
     --font-style: normal;
 
-    --font-size-tittle: 5vw;
-    --font-size-profetion: 2vw;
+    --font-size-first: 5vw;
+    --font-size-second: 3vw;
+    --font-size-third: 2vw;
     --padding-containers: 1rem;
     --large-padding: 4rem;
     --space-between-element: 1rem;

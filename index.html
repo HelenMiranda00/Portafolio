@@ -14,15 +14,24 @@
 
     <meta property="og:title" content="Helen Miranda - Fotografía Profesional">
     <meta property="og:description"
-        content="Helen Miranda ofrece servicios de fotografía profesional, capturando los momentos más especiales con un estilo editorial y artístico. Contacta para más información.">
+        content="Helen Miranda ofrece servicios de fotografía profesional en David Chiriqui Panamá, capturando los momentos más especiales con un estilo editorial y artístico. Contacta para más información.">
     <meta property="og:image" content="./assets/img/profile/p-1.webp">
     <meta property="og:url" content="https://helenmiranda00.github.io/Portafolio/">
     <meta property="og:type" content="website">
+    
+    <meta name="description" content="Servicios de fotografía profesional en Panamá. Sesiones de estudio, eventos y exteriores. Contáctanos para más información.">
+    <meta name="keywords" content="fotografía en Panamá, fotógrafo profesional Panamá, servicios de fotografía Panamá, sesiones de fotos Panamá">
+    <meta name="geo.region" content="PA">
+    <meta name="geo.placename" content="Panamá">
+    <meta name="geo.position" content="8.4208;-82.4315">
+    <meta name="ICBM" content="8.4208, -82.4315">
+
 
     <link rel="icon" href="./assets/icons/HM.svg" type="image/svg+xml">
     <link rel="canonical" href="https://helenmiranda00.github.io/Portafolio/">
     <meta name="robots" content="index, follow">
 
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -38,8 +47,29 @@
     <link rel="stylesheet" href="./style/portafolio.css">
     <link rel="stylesheet" href="./style/feedback.css">
     <link rel="stylesheet" href="./style/footer.css">
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Helen Miranda",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "David Chiriquí de Panama",
+            "addressLocality": "Chiriquí",
+            "addressRegion": "Provincia de Chiriquí",
+            "postalCode": "",
+            "addressCountry": "PA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 8.4208,
+            "longitude": -82.4315
+          },
+          "url": "https://helenmiranda00.github.io/Portafolio/",
+        }
+        </script>
+        
 </head>
-
 
 <body>
     <!-- Menu Mobile -->
@@ -91,13 +121,13 @@
     <header class="header-desktop">
         <nav class="nav">
             <div class="name-icon">
-                <a href="#about"><img src="./assets/icons/HM.svg" alt="logo de Helen Miranda fotografo"></a>
+                <a href="#home"><img src="./assets/icons/HM.svg" alt="logo de Helen Miranda fotografo"></a>
             </div>
             <ul>
                 <li><a href="#home" id="nav-home">Inicio</a></li>
                 <li><a href="#about" id="nav-about">Sobre mi</a></li>
                 <li><a href="#portafolio" id="nav-portafolio">Portafolio</a></li>
-                <li><a href="#feedback" id="nav-feedback">Feedback</a></li>
+                <li><a href="./html/services.html" id="nav-feedback">Servicios</a></li>
             </ul>
         </nav>
     </header>
