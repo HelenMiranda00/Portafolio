@@ -1,36 +1,60 @@
 /* Estilos para la sección introductoria */
 .intro-section {
+    position: relative;
     padding: var(--large-padding);
     text-align: center;
     font-family: var(--font-family);
-    
-    & .intro-content {
-        max-width: 800px;
-        margin: 0 auto;
-        
-        & h2 {
-           font-family: var(--font-family);
-           color: var(--clr-60);
-           margin-bottom: var(--space-between-element);
-        }
-        
-        & p {
-           font-size: 1.2rem;
-           color: var(--clr-50);
-           margin-bottom: var(--space-between-element);
+    margin-top: 10rem;
 
-           & strong {
-              font-size: 1.3rem;
-              display: block;
-              margin-top: var(--space-between-element);
-              margin-top: calc(var(--space-between-element)* 3);
-              color: var(--clr-80);
+    & .intro-content::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        background: var(--url-bg-img-section);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    & .intro-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 4rem;
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        background-color: rgba(121, 64, 49, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & h2 {
+            font-family: var(--font-family);
+            color: var(--clr-20);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        & p {
+            font-size: 1.2rem;
+            color: var(--clr-20);
+            margin-bottom: var(--space-between-element);
+
+            & strong {
+                font-size: 1.3rem;
+                display: block;
+                margin-top: var(--space-between-element);
+                margin-top: calc(var(--space-between-element)* 3);
+                color: var(--clr-00);
             }
         }
     }
 }
-
-
 
 /* Media queries para responsividad */
 @media (max-width: 768px) {

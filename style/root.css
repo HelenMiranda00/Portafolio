@@ -13,9 +13,10 @@
 
     --bg-1: #100909;
     --bg-2: #0a0606;
-    /* --bg-gradient: linear-gradient(45deg, #512f1c, var(--bg-1)); */
-    --bg-gradient: linear-gradient(180deg, var(--clr-90), var(--clr-80), var(--clr-60), var(--clr-50));
-    --shadow-00: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    --url-bg-img-section: url(../assets/img/retrato/retrato-group-4/retrato-03.jpg);
+    --bg-gradient: linear-gradient(180deg, var(--clr-80), var(--clr-60), var(--clr-50));
+    --bg-second: linear-gradient(180deg, var(--clr-80), var(--clr-90));
+    --shadow-00: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
     /* general style */
     --font-family: "Poppins", serif;

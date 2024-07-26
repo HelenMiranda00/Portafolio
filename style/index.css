@@ -5,26 +5,16 @@ body {
     height: 100%;
     overflow-x: hidden;
     position: relative;
-    background-image: var(--bg-gradient);
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: var(--font-family);
-        font-size: 3rem;
-    }
+    /* background-image: var(--bg-gradient); */
+    background-color: var(--clr-00);
 }
 
 .container-all {
     width: 100%;
 
     .section {
-        height: auto;
-        width: 100%;
-        margin-bottom: 2rem;
+        height: 100vh;
+        width: 100vw;
         transition: all .8s ease-in-out;
     }
 
@@ -39,17 +29,10 @@ body {
         transform: scale(1);
     }
 }
+
 @media (max-width: 768px) {
     body {
         /* espacio para el header mobile*/
-        padding-bottom: 6vh; 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-size: 2rem;
-        }
+        padding-bottom: 6vh;
     }
 }

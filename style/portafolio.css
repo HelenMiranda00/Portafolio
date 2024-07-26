@@ -1,4 +1,5 @@
 #portafolio {
+    margin-top: 5rem;
 
     .tittle {
         margin-bottom: var(--space-between-element);
@@ -6,6 +7,8 @@
         h2 {
             text-align: center;
             color: var(--clr-80);
+            font-size: 5rem;
+            margin-bottom: 2rem;
         }
     }
 

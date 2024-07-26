@@ -1,8 +1,28 @@
+import { isElementInViewport } from './js/utils.js';
 // AGREGAR SECCIONES Y ANIMARLAS AL HACER SCROLL.
-const animateSpanInAbout = () => {
+
+// animar el texto de "sobre me"
+const seeMoreContentAboutMe = () => {
+    const btn_moreAboutMe = document.getElementById('more-aboutMe');
     const paragrahpList = document.querySelectorAll('.paragrahp');
-    paragrahpList.forEach(span => {
-        span.style.animationName = 'showText';
+    
+    btn_moreAboutMe.addEventListener('click', () => {
+        const contentDes = document.getElementById('description-aboutMe');
+        contentDes.style.opacity = '1';
+
+        const title = document.querySelector('.about-content').children[0].children[0];
+        title.style.opacity = '0.2';
+        
+        setTimeout(() => {
+            if (!isElementInViewport(contentDes)) {
+                contentDes.style.opacity = '0';
+                title.style.opacity = '1';
+            }
+        }, 20000)
+        
+        paragrahpList.forEach(span => {
+            span.style.animationName = 'showText';
+        });
     });
 }
 
@@ -10,7 +30,7 @@ const animateSpanInAbout = () => {
 const options = {
     root: null,
     threshold: 0.25,
-    rootMargin: '0px'
+    rootMargin: '5px'
 };
 // iniciar el observador para cada seccion, 
 // verificar cada seccion e inyectarle el archivo html respectivamente,
@@ -23,7 +43,9 @@ const observer = new IntersectionObserver((entries, observer) => {
         if (entry.isIntersecting) {
             entry.target.classList.remove('fade-enter');
             entry.target.classList.add('fade-enter-active');
-            if (entry.target.id === 'about') animateSpanInAbout();
+            if (entry.target.id === 'about') {
+                seeMoreContentAboutMe();
+            }
             observer.unobserve(entry.target);
         };
     });

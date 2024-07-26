@@ -12,32 +12,66 @@
     }
 
     figure {
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            box-shadow: 2px 0px 9px var(--clr-80);
+            box-shadow: var(--shadow-00);
         }
     }
 
     .about-content {
-        padding: 2.6rem;
+        position: relative;
+        padding: 0 2rem;
 
         .title {
-            margin-bottom: var(--space-between-element);
+            position: absolute;
+            height: 100%;
+
             h2 {
                 color: var(--clr-60);
+                font-size: 5.5rem;
+            }
+            button {
+                position: absolute;
+                bottom: 5px;
+                left: -62%;
+                cursor: pointer;
+                padding: 1rem 2rem;
+                margin-top: 1rem;
+                color: var(--clr-20);
+                font-size: 1.5rem;
+                border: 1px solid var(--clr-40);
+                border-radius: var(--border-radius);
+                background-color: transparent;
+                z-index: 5;
+                transition: all 0.3s ease;
+    
+                &:hover {
+                    background-color: var(--clr-40);
+                    box-shadow: var(--shadow-00);
+                }
             }
         }
 
-        .description {
+        #description-aboutMe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 1s ease;
             
             .paragrahp {
                 opacity: 0;
                 transform: translateX(45rem);
                 animation: 0.6s forwards;
                 margin-bottom: var(--space-between-element);
-                color: var(--clr-30);
+                color: var(--clr-80);
+                font-size: 1.3rem;
             }
             
             .paragrahp:nth-child(1) {
