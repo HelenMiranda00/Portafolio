@@ -85,6 +85,17 @@
 
 @media (max-width: 768px) {
     #feedback {
+
+        .tittle {
+            padding: calc(var(--large-padding)/2);
+    
+            h2{
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
         & .content-testimonial {
 
             .feedback-item {

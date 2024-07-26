@@ -33,6 +33,6 @@ body {
 @media (max-width: 768px) {
     body {
         /* espacio para el header mobile*/
-        padding-bottom: 6vh;
+        /* padding-bottom: 6vh; */
     }
 }

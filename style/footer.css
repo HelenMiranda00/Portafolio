@@ -90,6 +90,7 @@
 @media (max-width: 768px) {
     #contact {
         width: 90%;
+        margin-bottom: 1rem;
 
         .contact-container {
             flex-direction: column;

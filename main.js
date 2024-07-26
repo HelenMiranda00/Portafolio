@@ -5,25 +5,33 @@ import { isElementInViewport } from './js/utils.js';
 const seeMoreContentAboutMe = () => {
     const btn_moreAboutMe = document.getElementById('more-aboutMe');
     const paragrahpList = document.querySelectorAll('.paragrahp');
-    
-    btn_moreAboutMe.addEventListener('click', () => {
-        const contentDes = document.getElementById('description-aboutMe');
-        contentDes.style.opacity = '1';
+    const widthSmall_00 = document.documentElement.clientWidth;
+    const widthSmall_01 = window.innerWidth;
 
-        const title = document.querySelector('.about-content').children[0].children[0];
-        title.style.opacity = '0.2';
-        
-        setTimeout(() => {
-            if (!isElementInViewport(contentDes)) {
-                contentDes.style.opacity = '0';
-                title.style.opacity = '1';
-            }
-        }, 20000)
-        
+    if (widthSmall_00 <= '800' || widthSmall_01 <= '800') {
         paragrahpList.forEach(span => {
             span.style.animationName = 'showText';
         });
-    });
+    } else {
+        btn_moreAboutMe.addEventListener('click', () => {
+            const contentDes = document.getElementById('description-aboutMe');
+            contentDes.style.opacity = '1';
+    
+            const title = document.querySelector('.about-content').children[0].children[0];
+            title.style.opacity = '0.2';
+            
+            setTimeout(() => {
+                if (!isElementInViewport(contentDes)) {
+                    contentDes.style.opacity = '0';
+                    title.style.opacity = '1';
+                }
+            }, 20000);
+            
+            paragrahpList.forEach(span => {
+                span.style.animationName = 'showText';
+            });
+        });
+    }
 }
 
 // opciones para el observador
