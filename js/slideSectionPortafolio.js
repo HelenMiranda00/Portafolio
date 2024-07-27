@@ -1,22 +1,37 @@
-// animacion para los slide del portafolio
 document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.btn-photo');
-    const slides = document.querySelectorAll('.slide');
 
-    filterButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            slides.forEach((slide, slideIndex) => {
-                if (slide.classList.contains('animate')) {
-                    slide.classList.remove('animate');
-                    slide.classList.add('close-animate');
-                    // retraso de 2s para eliminar la class
-                    setTimeout(() => {
-                        slide.classList.remove('close-animate');
-                    }, 2000);
+    const carousel = document.getElementById('carousel');
+    const cards = document.querySelectorAll('.card');
+    let currentIndex = 0;
+    let interval;
+
+    // funcion para animar el carrusel de fotos
+    function startAnimation() {
+        interval = setInterval(() => {
+            cards.forEach((card, index) => {
+                const persent = 50 / (cards.length - 1);
+                card.style.flex = index === currentIndex ? '0 0 50%' : `0 0 ${persent}%`;
+                const cardText = card.querySelector('.card-text');
+                cardText.classList.add('animation-text-on');
+                if (index === currentIndex) {
+                    cardText.classList.add('animation-text-on');
+                    cardText.classList.remove('animation-text-off');
+                } else {
+                    cardText.classList.add('animation-text-off');
+                    cardText.classList.remove('animation-text-on');
                 }
             });
-            // animar slide equivalente al boton por medio de su index equivalente al slide.
-            slides[index].classList.add('animate');
-        });
-    });
+            currentIndex = (currentIndex + 1) % cards.length;
+        }, 6000); // Cambia cada 6 segundos
+    }
+    startAnimation();
+
+    // funcion para detener la animacion
+    function stopAnimation() {
+        clearInterval(interval);
+    }
+    
+    //  se detiene la animacion cuando el mouse entra en el contenedor e inicia cuando sale
+    carousel.addEventListener('mouseenter', stopAnimation);
+    carousel.addEventListener('mouseleave', startAnimation);
 });

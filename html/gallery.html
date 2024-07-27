@@ -69,7 +69,8 @@
     <header class="header-desktop">
         <nav class="nav">
             <div class="name-icon">
-                <a href="../index.html#home"><img src="../assets/icons/HM.svg" alt="logo de Helen Miranda fotografo"></a>
+                <a href="../index.html#home"><img src="../assets/icons/HM.svg"
+                        alt="logo de Helen Miranda fotografo"></a>
             </div>
             <ul>
                 <li><a href="../index.html#home" id="nav-home">Inicio</a></li>
@@ -82,6 +83,8 @@
     <!-- Section Gallery -->
     <section id="header-gallery">
         <h1>Galería de Retratos</h1>
+
+        <!-- Filters -->
         <nav>
             <ul>
                 <li><button id="filter-retrato-1" type="button">Retrato - 1</button></li>
@@ -90,16 +93,30 @@
             </ul>
         </nav>
     </section>
+
+    <!-- img container -->
     <main>
         <div class="container active" id="container-1"></div>
         <div class="container hidden" id="container-2"></div>
         <div class="container hidden" id="container-3"></div>
     </main>
+
+    <!-- scroll botton up -->
     <button type="button" title="boton" id="scrollToTopBtn">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="m12 6.879-7.061 7.06 2.122 2.122L12 11.121l4.939 4.94 2.122-2.122z"></path>
         </svg>
     </button>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <button class="prev">&#10094;</button>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Modal Image">
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+
     <script type="module" src="../js/gallery.js"></script>
     <script type="module" src="../js/menuMobile.js"></script>
 </body>

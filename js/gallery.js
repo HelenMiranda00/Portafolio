@@ -29,6 +29,78 @@ const portafolio = {
     ],
 };
 
+const viewModal = () => {
+    // Modal
+    const gallery = document.querySelector('main .active');
+    const images = gallery.querySelectorAll('img');
+    const modal = document.querySelector('#modal');
+    const modalImg = document.querySelector('#modal-img');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+
+    // Show modal with selected image
+    function showModal(index) {
+        if (index < 0 || index >= images.length) return;
+        currentIndex = index;
+        const img = images[index];
+        modalImg.src = img.src;
+        modal.style.transform = 'scale(1)';
+        modal.style.opacity = '1';
+    }
+
+    // Close modal
+    function closeModal() {
+        modal.style.transform = 'scale(0)';
+        modal.style.opacity = '0';
+    }
+
+    // Show previous image
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) < 0 ? images.length - 1 : (currentIndex - 1 + images.length) % images.length;
+        showModal(currentIndex);
+    }
+
+    // Show next image
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showModal(currentIndex);
+    }
+
+    // Image click event
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            showModal(index);
+        });
+    });
+
+    // Previous button click event
+    prevBtn.addEventListener('click', showPrevImage);
+
+    // Next button click event
+    nextBtn.addEventListener('click', showNextImage);
+
+    // Close modal on click outside of modal-content
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (event) => {
+        if (modal.style.display === 'flex') {
+            if (event.key === 'ArrowLeft') {
+                showPrevImage();
+            } else if (event.key === 'ArrowRight') {
+                showNextImage();
+            } else if (event.key === 'Escape') {
+                closeModal();
+            }
+        }
+    });
+}
+
 const containers = document.querySelectorAll('.container');
 
 function displayPhotos(container, photos) {
@@ -73,23 +145,27 @@ scrollToTopBtn.onclick = function () {
 };
 
 // Aplicar el filtro desde la pagina index.html
-window.onload = function(){
+window.onload = function () {
     if (window.location.hash) {
         const filterID = window.location.hash.substring(1);
         if (filterID === 'filter-retrato-1') setActiveContainer(0);
         if (filterID === 'filter-retrato-2') setActiveContainer(1);
         if (filterID === 'filter-retrato-3') setActiveContainer(2);
     }
+    viewModal();
 }
 // Apicar los filtros por medio del click
 document.getElementById('filter-retrato-1').onclick = function () {
     setActiveContainer(0);
+    viewModal();
 };
 
 document.getElementById('filter-retrato-2').onclick = function () {
     setActiveContainer(1);
+    viewModal();
 };
 
 document.getElementById('filter-retrato-3').onclick = function () {
     setActiveContainer(2);
+    viewModal();
 };

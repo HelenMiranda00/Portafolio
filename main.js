@@ -25,7 +25,7 @@ const seeMoreContentAboutMe = () => {
                     contentDes.style.opacity = '0';
                     title.style.opacity = '1';
                 }
-            }, 20000);
+            }, 30000);
             
             paragrahpList.forEach(span => {
                 span.style.animationName = 'showText';
