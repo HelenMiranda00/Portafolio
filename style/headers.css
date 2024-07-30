@@ -6,11 +6,12 @@ body {
     }
 
     .header-desktop {
+        height: 80px;
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 1000;
-        padding: var(--padding-containers);
+        padding: 1rem;
         font-family: var(--font-family);
         display: flex;
         align-items: center;

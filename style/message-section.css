@@ -1,9 +1,10 @@
 /* Estilos para la sección introductoria */
-.intro-section {
+#message-section {
     position: relative;
     padding: var(--large-padding);
     text-align: center;
     font-family: var(--font-family);
+    margin: auto;
     margin-top: 10rem;
 
     & .intro-content::before {
@@ -25,7 +26,6 @@
         top: 0;
         left: 0;
         padding: 4rem;
-        width: 100vw;
         height: 100vh;
         margin: auto;
         background-color: rgba(24, 11, 7, 0.7);
@@ -58,37 +58,37 @@
 
 /* Media queries para responsividad */
 @media (max-width: 768px) {
-    .intro-section {
+    #message-section {
         padding: 2rem;
     }
 
-    .intro-section h2 {
+    #message-section h2 {
         font-size: 4rem;
     }
 
-    .intro-section p {
+    #message-section p {
         font-size: 1rem;
     }
 
-    .intro-section p strong {
+    #message-section p strong {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .intro-section {
+    #message-section {
         padding: 1rem;
     }
 
-    .intro-section h2 {
+    #message-section h2 {
         font-size: 3rem;
     }
 
-    .intro-section p {
+    #message-section p {
         font-size: 0.9rem;
     }
 
-    .intro-section p strong {
+    #message-section p strong {
         font-size: 1rem;
     }
 }

@@ -5,10 +5,15 @@ body {
     height: 100%;
     overflow-x: hidden;
     position: relative;
-    /* background-image: var(--bg-gradient); */
-    background-color: var(--clr-00);
+    background-color: var(--clr-20);
+    
+    /* medidas para desktop */
+    #about, #message-section, #portafolio {
+        max-width: 1200px;
+    }
 }
 
+/* Main */
 .container-all {
     width: 100%;
 
@@ -30,9 +35,113 @@ body {
     }
 }
 
+/* Modal about me */
+.modal-aboutMe {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: scale(0) translate(-100vw, 100vh);
+    opacity: 0;
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+    background-color: var(--bg-transparent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-aboutMe > #modal-content {
+    width: 26em;
+    height: 33em;
+    margin: auto;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-60);
+
+    img {
+        width: 100%;
+        height: 20em;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+        margin: auto;
+    }
+    .text {
+        padding: 1rem;
+        font-size: 1rem;
+        color: var(--clr-100);
+        p{
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+    }
+    .social-media-contact {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+
+        a img {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+        }
+    }
+}
+.enable-modal {
+    transform: scale(1) translate(0);
+    opacity: 1;
+}
+.disable-modal {
+    transform: scale(0) translate(-100vw, 100vh);
+    opacity: 0;
+}
+
+#open-modal-about,
+svg, 
+path {
+    cursor: pointer;
+}
+#open-modal-about {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2000;
+    background-color: var(--clr-90);
+    color: var(--clr-40);
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transform: scale(1);
+    box-shadow: var(--shadow-00);
+    transition: all 0.2s ease;
+
+    svg {
+        fill: var(--clr-20);
+        width: 2rem;
+        height: 2rem;
+    }
+}
+#open-modal-about:hover {
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
+/* Medidas para mobiles-tablets */
 @media (max-width: 768px) {
     body {
         /* espacio para el header mobile*/
-        /* padding-bottom: 6vh; */
+        padding-top: 0;
+
+        #about, #message-section, #portafolio {
+            max-width: 100vw;
+        }
+    }
+}
+/* Medidas para laptops */
+@media (max-width: 976px) {
+    body {
+        #about, #message-section, #portafolio {
+            max-width: 900px;
+        }
     }
 }

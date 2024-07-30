@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="./style/home.css">
     <link rel="stylesheet" href="./style/intro-aboutMe.css">
     <link rel="stylesheet" href="./style/about.css">
-    <link rel="stylesheet" href="./style/introSection.css">
+    <link rel="stylesheet" href="./style/message-section.css">
     <link rel="stylesheet" href="./style/portafolio.css">
     <link rel="stylesheet" href="./style/feedback.css">
     <link rel="stylesheet" href="./style/footer.css">
@@ -78,7 +78,7 @@
     <!-- Menu Mobile -->
     <header class="header-mobile">
         <div class="name-icon">
-            <img src="./assets/icons/HM.svg" alt="logo de Helen Miranda fotografo">
+            <img src="./assets/logo/HM.svg" alt="logo de Helen Miranda fotografo">
         </div>
         <div id="open-menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#aaa">
@@ -89,7 +89,7 @@
     <div id="menu-mobile">
         <div id="close-menu">
             <div class="name-icon">
-                <img src="./assets/icons/HM.svg" alt="logo de Helen Miranda fotografo">
+                <img src="./assets/logo/HM.svg" alt="logo de Helen Miranda fotografo">
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#aaa">
                 <path
@@ -125,7 +125,7 @@
     <header class="header-desktop">
         <nav class="nav">
             <div class="name-icon">
-                <a href="#home"><img src="./assets/icons/HM.svg" alt="logo de Helen Miranda fotografo"></a>
+                <a href="#home"><img src="./assets/logo/HM.svg" alt="logo de Helen Miranda fotografo"></a>
             </div>
             <ul>
                 <li><a href="#home" id="nav-home">Inicio</a></li>
@@ -220,19 +220,15 @@
 
         <!-- About Section -->
         <section class="section" id="about">
+            <!-- image profile -->
             <figure>
                 <img src="./assets/img/profile/p-1.webp" alt="Imagen de la fotógrafa Helen Miranda">
             </figure>
 
+            <!-- Title and Description -->
             <div class="about-content">
                 <hgroup class="title">
                     <h2>Capturando la belleza en cada momento</h2>
-                    <button title="Sobre Helen Miranda, Chiriqui Panamá" type="button" id="more-aboutMe"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);">
-                            <path
-                                d="M18 6h2v12h-2zm-2 5H7.414l4.293-4.293-1.414-1.414L3.586 12l6.707 6.707 1.414-1.414L7.414 13H16z">
-                            </path>
-                        </svg></button>
                 </hgroup>
                 <aside id="description-aboutMe">
 
@@ -264,7 +260,7 @@
         </section>
 
         <!-- Introduction -->
-        <section class="section intro-section">
+        <section class="section" id="message-section">
             <div class="intro-content">
                 <h2>Cada imagen cuenta una historia única</h2>
                 <p>Tu álbum de fotos no es solo una colección de imágenes; es un reflejo de momentos que vivimos y
@@ -276,35 +272,49 @@
             </div>
         </section>
 
-
         <!-- Portafolio Section-->
         <section class="section" id="portafolio">
             <h2 class="title">Portafolio</h2>
             <div class="portafolio-content" id="carousel">
                 <!-- Card 1 -->
-                <a href="./html/gallery.html#filter-retrato-1"  class="card">
+                <a href="./html/gallery.html#filter-retrato-1" class="card">
                     <img src="./assets/img/retrato/retrato-group-1/retrato-00.jpg" alt="Retrato 1" class="card-image">
-                    <div class="card-text">Sumérgete en el encanto de los retratos con estilo, capturando la esencia vibrante de la juventud y la elegancia. Esta colección de imágenes presenta a una modelo con un traje rojo intenso, mostrando una serie de poses que destacan su gracia y confianza. Descubre cómo la iluminación y el fondo marrón profundo se combinan para resaltar cada detalle.</div>
+                    <div class="card-text">Sumérgete en el encanto de los retratos con estilo, capturando la esencia
+                        vibrante de la juventud y la elegancia. Esta colección de imágenes presenta a una modelo con un
+                        traje rojo intenso, mostrando una serie de poses que destacan su gracia y confianza. Descubre
+                        cómo la iluminación y el fondo marrón profundo se combinan para resaltar cada detalle.</div>
                 </a>
                 <!-- Card 2 -->
                 <a href="./html/gallery.html#filter-retrato-2" class="card">
                     <img src="./assets/img/retrato/retrato-group-2/retrato-00.jpg" alt="Retrato 2" class="card-image">
-                    <div class="card-text">Explora la belleza natural en un entorno sereno, donde la modelo, con su vestido blanco con hojas azules, se integra perfectamente con la naturaleza circundante. Cada foto en esta serie captura momentos de delicadeza y calma, con fondos verdes que te hacen complementar su vestido fluido. Una invitación a la paz y la elegancia.</div>
+                    <div class="card-text">Explora la belleza natural en un entorno sereno, donde la modelo, con su
+                        vestido blanco con hojas azules, se integra perfectamente con la naturaleza circundante. Cada
+                        foto en esta serie captura momentos de delicadeza y calma, con fondos verdes que te hacen
+                        complementar su vestido fluido. Una invitación a la paz y la elegancia.</div>
                 </a>
                 <!-- Card 3 -->
                 <a href="./html/gallery.html#filter-retrato-2" class="card">
                     <img src="./assets/img/retrato/retrato-group-3/retrato-00.jpg" alt="Retrato 3" class="card-image">
-                    <div class="card-text">Adéntrate en un paraje natural donde la simplicidad se encuentra con la sofisticación. Con un entorno verde y rocas grises, esta serie de imágenes resalta la elegancia serena de una modelo latina que contrasta perfectamente con el entorno. Cada foto captura su tranquilidad y fuerza interior, creando una atmósfera de introspección y belleza natural.</div>
+                    <div class="card-text">Adéntrate en un paraje natural donde la simplicidad se encuentra con la
+                        sofisticación. Con un entorno verde y rocas grises, esta serie de imágenes resalta la elegancia
+                        serena de una modelo latina que contrasta perfectamente con el entorno. Cada foto captura su
+                        tranquilidad y fuerza interior, creando una atmósfera de introspección y belleza natural.</div>
                 </a>
                 <!-- Card 4 -->
                 <a href="./html/gallery.html#filter-retrato-2" class="card">
                     <img src="./assets/img/retrato/retrato-group-4/retrato-00.jpg" alt="Retrato 4" class="card-image">
-                    <div class="card-text">Descubre la serenidad y el misterio de la naturaleza, la modelo vestida en tonos tenues, que se fusiona con el entorno del río y los árboles. Esta colección captura momentos de contemplación y conexión con la tierra, donde cada pose refleja una historia de equilibrio y armonía.</div>
+                    <div class="card-text">Descubre la serenidad y el misterio de la naturaleza, la modelo vestida en
+                        tonos tenues, que se fusiona con el entorno del río y los árboles. Esta colección captura
+                        momentos de contemplación y conexión con la tierra, donde cada pose refleja una historia de
+                        equilibrio y armonía.</div>
                 </a>
                 <!-- Card 5 -->
                 <a href="./html/gallery.html#filter-retrato-3" class="card">
                     <img src="./assets/img/retrato/retrato-group-5/retrato-00.jpg" alt="Retrato 5" class="card-image">
-                    <div class="card-text">Vive la intensidad y el dinamismo del rock en un estudio iluminado con colores del arcoíris. Esta serie muestra a una modelo con un estilo heavy metal, guitarra eléctrica en mano, y un fondo vibrante que realza su actitud poderosa y rebelde. Cada foto es un tributo a la energía y la pasión de la música.</div>
+                    <div class="card-text">Vive la intensidad y el dinamismo del rock en un estudio iluminado con
+                        colores del arcoíris. Esta serie muestra a una modelo con un estilo heavy metal, guitarra
+                        eléctrica en mano, y un fondo vibrante que realza su actitud poderosa y rebelde. Cada foto es un
+                        tributo a la energía y la pasión de la música.</div>
                 </a>
             </div>
         </section>
@@ -381,8 +391,38 @@
         </section>
 
     </main>
+
+    <!-- Modal About me -->
+    <section class="modal-aboutMe disable-modal">
+        <div id="modal-content">
+            <img src="./assets/img/profile/p-1.webp" alt="fotografía Helen Miranda, fotografo profecional David chiriqui Panamá">
+            <div class="text">
+                <p>¿Listo para capturar tu momento especial?</p>
+                <p>¡Contáctame hoy y deja que haga magia con mi cámara!</p>
+            </div>
+            <div class="social-media-contact">
+                <a target="_blank" id="instagramIcon" href=""><img src="./assets/icons/instagram.svg"
+                        alt="instagram de Helen Miranda. @helentmiranda"></a>
+                <a target="_blank" id="whatsappIcon" href=""><img src="./assets/icons/whatsapp.svg"
+                        alt="Whatsapp de Helen Miranda"></a>
+                <a target="_blank" id="emailIcon" href=""><img src="./assets/icons/email.svg"
+                        alt="Email de Helen Miranda"></a>
+            </div>
+        </div>
+    </section>
+    <!-- scroll Icon About me -->
+    <button type="button" title="Helen Miranda fotografo profecional de david chiriqui, Panamá" id="open-modal-about">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M12 9c-1.626 0-3 1.374-3 3s1.374 3 3 3 3-1.374 3-3-1.374-3-3-3z"></path>
+            <path
+                d="M20 5h-2.586l-2.707-2.707A.996.996 0 0 0 14 2h-4a.996.996 0 0 0-.707.293L6.586 5H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm-8 12c-2.71 0-5-2.29-5-5s2.29-5 5-5 5 2.29 5 5-2.29 5-5 5z">
+            </path>
+        </svg>
+    </button>
+
     <script type="module" src="./main.js"></script>
     <script type="module" src="./js/menuMobile.js"></script>
+    <script type="module" src="./js/aboutMe.js"></script>
     <script type="module" src="./js/slideSectionPortafolio.js"></script>
     <script type="module" src="./js/animationFeedback.js"></script>
     <script type="module" src="./js/animationHomeMobile.js"></script>

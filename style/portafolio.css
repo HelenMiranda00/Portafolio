@@ -1,6 +1,7 @@
 /* General styles */
-.section {
+#portafolio {
     padding-top: 3rem;
+    margin: auto;
 }
 
 .title {

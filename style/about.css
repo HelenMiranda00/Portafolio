@@ -1,13 +1,9 @@
-:root {
-    --opacity: 0.2;
-    --opacity-middle: 0.2;
-    --opacity-off: 0;
-}
 #about {
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden; */
+    overflow: hidden;
     font-family: var(--font-family);
 
     figure,
@@ -24,50 +20,24 @@
             object-fit: cover;
             box-shadow: var(--shadow-00);
         }
-        img:hover {
-            --opacity: 0.2;
-            cursor: pointer;
-        }
     }
 
     .about-content {
         position: relative;
-        padding: 0 2rem;
 
         .title {
             position: absolute;
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             h2 {
+                padding: 2rem;
                 color: var(--clr-60);
                 font-size: 5.5rem;
-                opacity: var(--opacity);
+                opacity: 1;
                 transition: opacity 1s ease;
-            }
-            button {
-                position: absolute;
-                top: 0px;
-                left: -18%;
-                cursor: pointer;
-                padding: 0.5rem 1rem;
-                margin-top: 1rem;
-                color: var(--clr-20);
-                font-size: 1.5rem;
-                border: 1px solid var(--clr-40);
-                border-radius: var(--border-radius);
-                background-color: var(--clr-30);
-                box-shadow: var(--shadow-00);
-                z-index: 5;
-                transition: all 0.3s ease;
-    
-                svg, path {
-                    cursor: pointer;
-                }
-                &:hover {
-                    background-color: var(--clr-50);
-                    box-shadow: none;
-                    transform: scale(0.9);
-                }
             }
         }
 
@@ -80,14 +50,18 @@
             padding: 2rem;
             opacity: 0;
             transition: opacity 1s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             
             .paragrahp {
                 opacity: 0;
                 transform: translateX(45rem);
                 animation: 0.6s forwards;
-                margin-bottom: var(--space-between-element);
-                color: var(--clr-80);
-                font-size: 1.3rem;
+                margin-bottom: 1rem;
+                color: var(--clr-90);
+                font-size: 1.2rem;
             }
             
             .paragrahp:nth-child(1) {
@@ -101,6 +75,7 @@
             }
         }
     }
+
 }
 
 @keyframes showText {
