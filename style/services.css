@@ -30,9 +30,10 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            
             .package-category {
                 margin-bottom: 10rem;
+                overflow: hidden;
 
                 h3 {
                     font-size: 2rem;
@@ -48,19 +49,19 @@ body {
                     align-items: center;
 
                     .package {
-                        width: calc(100% - 1rem);
+                        width: calc(90% - 1rem);
                         background: var(--clr-00);
                         box-shadow: var(--shadow-00);
                         display: flex;
                         align-items: center;
                         margin: 1rem 0;
-                        transform: translate(0);
+                        transform-origin: bottom;
                         transition: all 0.4s ease;
-
+                        
                         &:hover {
-                            transform: translate(-10px, 13px);
+                            transform: translate(0px, -10px);
                             box-shadow: none;
-
+                            
                             & .package-details button {
                                 background-color: var(--clr-30);
                                 box-shadow: var(--shadow-00);
@@ -124,6 +125,20 @@ body {
                                 transition: all 0.3s;
                             }
                         }
+                    }
+
+                    .scaleDesable {
+                        transform: translate(0);
+                        opacity: 1;
+                    }
+                    
+                    .scaleRight {
+                        transform: translate(5vw, -5vh);
+                        opacity: 0;
+                    }
+                    .scaleLeft {
+                        transform: translate(-5vw, -5vh);
+                        opacity: 0;
                     }
                 }
             }

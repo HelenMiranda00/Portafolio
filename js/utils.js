@@ -40,17 +40,18 @@ export async function loadComponent(url, containerID) {
  * @param {string} loading - atributo loading de la img, por defecto "lazy"
  * @returns devuelve la img cargada.
  */
-export function imgOnLoad(url, alt = '', className = '', id = '', loading = 'lazy') {
+export function imgOnLoad(url, alt = '', title='', id = '', className='', loading = 'lazy') {
     const img = new Image();
     img.src = url;
     img.onload = function () {
         if (alt) img.alt = alt;
+        if (title) img.title = title;
         if (className) img.className = className;
         if (id) img.id = id;
         if (loading) img.loading = loading;
     };
     img.onerror = function () {
-        console.error('Error al cargar la imagen.')
+        console.error('Error al cargar la imagen.');
     };
     return img;
 };

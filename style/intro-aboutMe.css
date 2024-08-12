@@ -38,6 +38,8 @@
 
 @media (max-width: 768px) {
     #intro-aboutMe {
+        height: auto;
+        
         .container {    
             width: 95%;
 

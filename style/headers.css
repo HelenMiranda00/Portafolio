@@ -113,8 +113,9 @@ body {
                 transition: opacity .3s;
 
                 svg {
-                    width: 2.5rem;
-                    height: 2.5rem;
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50%;
                     fill: var(--clr-20);
                     background-color: var(--clr-80);
                 }
@@ -126,14 +127,14 @@ body {
             position: fixed;
             top: 0;
             left: 0;
-            transform: translateX(-110%);
-            width: 25vh;
+            transform: translateX(-100%);
+            width: 50vh;
             height: 100dvh;
             background-color: var(--bg-mobile-menu);
             display: flex;
             flex-direction: column;
             align-items: center;
-            z-index: 1000;
+            z-index: 3000;
             -webkit-backdrop-filter: blur(0.5rem);
             backdrop-filter: blur(0.5rem);
             transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -141,7 +142,7 @@ body {
             #close-menu {
                 width: 100%;
                 display: flex;
-                justify-content: space-around;
+                justify-content: flex-start;
                 align-items: center;
                 padding-top: 1rem;
                 opacity: 1;
@@ -152,8 +153,10 @@ body {
                 }
 
                 svg {
-                    width: 2.5rem;
-                    height: 2.5rem;
+                    width: 4rem;
+                    height: 4rem;
+                    border-radius: 50%;
+                    margin-left: 1rem;
                     fill: var(--clr-20);
                     background-color: var(--clr-80);
                 }
@@ -162,9 +165,10 @@ body {
             ul {
                 width: 100%;
                 border-bottom: solid 2px var(--clr-20);
-                margin-bottom: 1rem;
+                margin-bottom: 2rem;
 
                 li {
+                    font-size: 2rem;
                     margin: 2rem;
                     color: var(--clr-30);
                 }
@@ -176,12 +180,13 @@ body {
                 align-items: center;
 
                 a {
-                    width: 30px;
-                    height: 30px;
+                    width: 3rem;
+                    height: 3rem;
                     margin: 0 0.5rem;
 
-                    svg {
-                        fill: var(--clr-30);
+                    img {
+                        width: 100%;
+                        height: 100%;
                     }
                 }
             }

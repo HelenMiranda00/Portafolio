@@ -1,15 +1,5 @@
 import { serviciosDeFotografia } from './arrayCategory.js';
-
-function cargarImagen(url, alt, loading = "lazy") {
-    const img = new Image();
-    img.src = url;
-    img.alt = alt;
-    img.loading = loading;
-    img.onerror = () => {
-        img.src = "ruta/a/la/imagen-de-error.jpg"; // Imagen de respaldo
-    };
-    return img;
-}
+import { imgOnLoad } from './utils.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     const packagesContainer = document.querySelector("#services .packages");
@@ -34,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 card.classList.add("package");
 
                 // img
-                const packageImage = cargarImagen(paquete.imagen, paquete.titulo);
+                const packageImage = imgOnLoad(paquete.imagen, paquete.titulo);
                 card.appendChild(packageImage);
 
                 // Package-details 
