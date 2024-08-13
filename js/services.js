@@ -1,6 +1,6 @@
 import { API_KEY, baseId, services } from "../API.js";
 import { fetchAPI } from "./fetchAPI.js";
-import { imgOnLoad } from "./utils.js";
+import { imgOnLoad, isElementMiddleViewport } from "./utils.js";
 const API_URL = `https://api.airtable.com/v0/${baseId}/${services}?listRecords&view=services`;
 
 const resolve = fetchAPI(API_URL, API_KEY);
@@ -18,7 +18,7 @@ resolve
                     let description = record?.fields?.description;
                     let image = record?.fields?.image_1[0]?.url;
                     let textButton = record?.fields?.text_button;
-                    
+
                     return { title, category, subTitle, price, description, image, textButton, location };
                 }
                 return null;
@@ -115,7 +115,7 @@ resolve
                             listCategory.appendChild(card);
                         };
                     });
-                    
+
                     // Add list category in contatiner Services
                     categoryDiv.appendChild(listCategory);
                     // Add container in container Services
@@ -126,19 +126,19 @@ resolve
 
         // Animacion para el scroll de las card de servicios.
         const cardServices = document.querySelectorAll('.package');
-        console.log(cardServices);
-        cardServices.forEach((card, index ) => {
+        cardServices.forEach((card, index) => {
             if (index % 2 === 0) {
                 card.classList.add('scaleLeft');
             } else {
                 card.classList.add('scaleRight');
             };
         });
-        
+
         document.addEventListener('scroll', function () {
             cardServices.forEach(function (element) {
-                
-                if (element.getBoundingClientRect().top < window.innerHeight) {
+                const elementTop = element.getBoundingClientRect().top < window.innerHeight;
+
+                if (elementTop) {
                     if (element.classList.contains('scaleLeft')) {
                         element.classList.remove('scaleLeft');
                         element.classList.add('scaleDesable')

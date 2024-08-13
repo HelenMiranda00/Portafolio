@@ -14,7 +14,10 @@
     --bg-1: #100909;
     --bg-2: #0a0606;
     --bg-transparent-color: rgba(24, 11, 7, 0.7);
-    --url-bg-img-section: url(../assets/img/retrato/retrato-04.jpg);
+
+    /* photo for introduction section */
+    --url-bg-img-section: url(../assets/img/intro/intro-00.jpg);
+    
     --bg-gradient: linear-gradient(180deg, var(--clr-80), var(--clr-60), var(--clr-50));
     --bg-second: linear-gradient(180deg, var(--clr-80), var(--clr-90));
     --shadow-00: 0px 0px 10px var(--clr-60);

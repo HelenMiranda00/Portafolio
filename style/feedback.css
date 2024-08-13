@@ -48,6 +48,7 @@
                 /* animacion */
                 box-shadow: none;
                 opacity: 0;
+                transform: scale(0.2);
                 box-shadow: var(--shadow-00);
                 transform-origin: bottom;
                 transition: all 0.4s ease;
@@ -87,7 +88,7 @@
                 }
             }
             .active {
-                transform-origin: bottom;
+                transform: scale(1);
                 opacity: 1;
                 transition: all 0.4s ease;
             }

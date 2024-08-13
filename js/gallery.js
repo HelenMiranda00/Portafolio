@@ -5,7 +5,7 @@ import { imgOnLoad } from "./utils.js";
 const viewModal = () => {
     // Modal
     const gallery = document.querySelector('main .active');
-    const images = gallery.querySelectorAll('img');
+    const images = gallery.querySelectorAll('.boxImage');
     const modal = document.querySelector('#modal');
     const modalImg = document.querySelector('#modal-img');
     const prevBtn = document.querySelector('.prev');
@@ -16,7 +16,7 @@ const viewModal = () => {
     function showModal(index) {
         if (index < 0 || index >= images.length) return;
         currentIndex = index;
-        const img = images[index];
+        const img = images[index].firstElementChild;
         modalImg.src = img.src;
         modal.style.transform = 'scale(1)';
         modal.style.opacity = '1';
@@ -70,15 +70,7 @@ const viewModal = () => {
     });
 }
 
-function displayPhotos(container, photos) {
-    container.innerHTML = ''; // Clear existing content
-    photos.forEach(photo => {
-        const img = imgOnLoad(photo.image, photo.alt, photo.title);
-        container.appendChild(img);
-    });
-}
-
-// Funcion para activar las cajas de las imagenes
+// Funtion for active the container
 const setActiveContainer = (listContainer, index) => {
     listContainer.forEach((container, i) => {
         if (i === index) {
@@ -91,94 +83,103 @@ const setActiveContainer = (listContainer, index) => {
     });
 };
 
-function createAndDisplayBox(index, indexTarget, className, activeClass, dataListImage, containerBox) {
-    if (index === indexTarget) {
-        const box = document.createElement('div');
-        box.classList.add(className);
-        
-        if (activeClass) box.classList.add(activeClass);
+function applyRandomClasses() {
+    const imageBoxes = document.querySelectorAll('.image-box');
+    const sizes = ['size-small', 'size-medium', 'size-large'];
+    const shapes = ['shape-rectangle', 'shape-square'];
 
-        displayPhotos(box, dataListImage);
-        containerBox.appendChild(box);
-        viewModal();
-    }
+    imageBoxes.forEach(box => {
+        const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+        const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+        box.classList.add(randomSize, randomShape);
+    });
 }
 
-const ArrayImageStudio = `https://api.airtable.com/v0/${baseId}/${gallery_studio}?listRecords&view=retrato_studio`;
-const ArrayImageNature = `https://api.airtable.com/v0/${baseId}/${gallery_nature}?listRecords&view=retrato_nature`;
-const dataStudio = fetchAPI(ArrayImageStudio, API_KEY);
-const dataNature = fetchAPI(ArrayImageNature, API_KEY);
+function processImageList(imageList, container) {
+    imageList.forEach((image) => {
+        const box = document.createElement('div');
+        box.classList.add('boxImage');
+        const img = imgOnLoad(image.image, image.alt, image.title);
+        box.appendChild(img);
+        container.appendChild(box);
+    });
+};
+
 const btn_filterStudio = document.getElementById('filter-studio');
 const btn_filterNature = document.getElementById('filter-nature');
-// container general
+// general container
 const main = document.querySelector('main');
-// container for images
+// Container for the images of a specific class
 const [...containers] = main.children;
 
-// show for default first container
-containers.forEach((cont, index) => {
-    if (index === 0) {
-        cont.classList.remove('hidden');
-        cont.classList.add('active');
-    } else {
-        cont.classList.remove('active');
-        cont.classList.add('hidden');
-    }
-});
+const loadContent_PhotoStudio = () => {
+    const ArrayImageStudio = `https://api.airtable.com/v0/${baseId}/${gallery_studio}?listRecords&view=retrato_studio`;
+    const dataStudio = fetchAPI(ArrayImageStudio, API_KEY);
 
-// Aplicar el filtro desde la pagina index.html
+    // Gallery for photos Studio
+    dataStudio.then(data => {
+        // get list image
+        const dataListImage = getImage(data.records);
+        processImageList(dataListImage, containers[0]);
+        viewModal()
+
+    }).catch(error => { console.error(error) });
+};
+
+const loadContent_PhotoNature = () => {
+    const ArrayImageNature = `https://api.airtable.com/v0/${baseId}/${gallery_nature}?listRecords&view=retrato_nature`;
+    const dataNature = fetchAPI(ArrayImageNature, API_KEY);
+
+    // Gallery for photos Natures
+    dataNature.then(data => {
+        // get list image
+        const dataListImage = getImage(data.records);
+        processImageList(dataListImage, containers[1]);
+        viewModal();
+
+    }).catch(error => { console.error(error) });
+};
+
+// Apply the filter from the index.html page
 window.onload = function () {
     if (window.location.hash) {
         const filterID = window.location.hash.substring(1);
-        if (filterID === 'filter-studio') setActiveContainer(containers, 0);
-        if (filterID === 'filter-nature') setActiveContainer(containers, 1);
-    }
-    viewModal();
-}
-
-dataStudio.then(data => {
-    // get list image
-    const dataListImage = getImage(data.records);
-
-    containers.forEach((containerBox, index) => {
-        createAndDisplayBox(index, 0, 'boxImage', 'active', dataListImage, containerBox);
-
-        // Apicar los filtros por medio del click
-        btn_filterStudio.onclick = function () {
+        if (filterID === 'filter-studio') {
             setActiveContainer(containers, 0);
-            viewModal();
+            loadContent_PhotoStudio();
         };
-    });
-}).catch(error => { console.error(error) });
 
-// Gallery for photos Natures
-dataNature.then(data => {
-    // get list image
-    const dataListImage = getImage(data.records);
-
-    containers.forEach((containerBox, index) => {
-        createAndDisplayBox(index, 1, 'boxImage', 'active', dataListImage, containerBox);
-
-        // Apicar los filtros por medio del click
-        btn_filterNature.onclick = function () {
+        if (filterID === 'filter-nature') {
             setActiveContainer(containers, 1);
-            viewModal();
+            loadContent_PhotoNature();
         };
-    });
-}).catch(error => { console.error(error) });
+    };
 
-// Obtener el botón
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    // Apicar los filtros por medio del click
+    btn_filterStudio.onclick = function () {
+        setActiveContainer(containers, 0);
+        loadContent_PhotoStudio();
+    };
 
-// Mostrar el botón cuando el usuario baja 100 píxeles desde la parte superior del documento
-window.onscroll = function () {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollToTopBtn.classList.add("show");
-    } else {
-        scrollToTopBtn.classList.remove("show");
-    }
-};
-// Cuando el usuario hace clic en el botón, desplázate hacia arriba
-scrollToTopBtn.onclick = function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Apply filters through click
+    btn_filterNature.onclick = function () {
+        setActiveContainer(containers, 1);
+        loadContent_PhotoNature();
+    };
+
+    // Get the button
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+    // Show the button when the user scrolls down 100 pixels from the top of the document
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    };
+    // When the user clicks the button, scroll to the top
+    scrollToTopBtn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 };

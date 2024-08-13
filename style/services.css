@@ -51,22 +51,11 @@ body {
                     .package {
                         width: calc(90% - 1rem);
                         background: var(--clr-00);
-                        box-shadow: var(--shadow-00);
                         display: flex;
                         align-items: center;
                         margin: 1rem 0;
                         transform-origin: bottom;
-                        transition: all 0.4s ease;
-                        
-                        &:hover {
-                            transform: translate(0px, -10px);
-                            box-shadow: none;
-                            
-                            & .package-details button {
-                                background-color: var(--clr-30);
-                                box-shadow: var(--shadow-00);
-                            }
-                        }
+                        transition: all 0.3s ease;
 
                         img {
                             width: 45%;
@@ -126,19 +115,31 @@ body {
                             }
                         }
                     }
+                    .package:hover {
+                        transform: translateY(-10px) scale(0.99);
+                        box-shadow: none;
+                        
+                        & .package-details button {
+                            background-color: var(--clr-30);
+                            box-shadow: var(--shadow-00);
+                        }
+                    }
 
                     .scaleDesable {
-                        transform: translate(0);
+                        transform: translateY(0) scale(1);
                         opacity: 1;
+                        box-shadow: var(--shadow-00);
                     }
                     
                     .scaleRight {
-                        transform: translate(5vw, -5vh);
-                        opacity: 0;
+                        transform: translate(8vw, -5vh);
+                        opacity: 0.7;
+                        box-shadow: none;
                     }
                     .scaleLeft {
-                        transform: translate(-5vw, -5vh);
-                        opacity: 0;
+                        transform: translate(-8vw, -5vh);
+                        opacity: 0.7;
+                        box-shadow: none;
                     }
                 }
             }
