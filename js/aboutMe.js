@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // image - profile
         const imageProfile = imgOnLoad(infoProfile[0].url, infoProfile[0].alt, infoProfile[0].title);
+        const imageProfileModal = imgOnLoad(infoProfile[0].url, infoProfile[0].alt, infoProfile[0].title);
 
         // add img in section about me
         aboutMeSection.firstElementChild.innerHTML = '';
@@ -96,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const [...listElements] = modalContent.children;
 
             listElements.forEach(element => {
-                if (element.matches('img')) element.replaceWith(imageProfile);
+                if (element.matches('img')) element.replaceWith(imageProfileModal);
 
                 if (element.matches('.social-media-contact')) {
                     const socialMediaIcons = document.querySelector('.social-media-contact');
