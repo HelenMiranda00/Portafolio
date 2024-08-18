@@ -1,5 +1,3 @@
-import { fetchAPI } from "./js/fetchAPI.js";
-
 // AGREGAR SECCIONES Y ANIMARLAS AL HACER SCROLL.
 
 // opciones para el observador

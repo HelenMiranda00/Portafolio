@@ -1,0 +1,59 @@
+# Portafolio de Fotografía de Helen Miranda
+
+## Descripción General
+Este es el portafolio oficial de Helen Miranda, una fotógrafa profesional con sede en Chiriquí, Panamá. El portafolio muestra la experiencia de Helen en fotografía tanto de estudio como al aire libre, ofreciendo una variedad de servicios adaptados a las necesidades de los clientes. El sitio web es completamente responsivo, optimizado para SEO, y sigue las mejores prácticas en accesibilidad y rendimiento.
+
+## Tabla de Contenidos
+- [Características](#características)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Uso](#uso)
+- [Consideraciones SEO](#consideraciones-seo)
+- [Accesibilidad](#accesibilidad)
+- [Rendimiento](#rendimiento)
+- [Contacto](#contacto)
+- [Licencia](#licencia)
+
+## Características
+- **Diseño Responsivo:** El sitio web es completamente responsivo, garantizando una experiencia fluida en todos los dispositivos.
+- **Optimizado para SEO:** Incluye datos estructurados, meta tags y contenido optimizado para mejorar el posicionamiento en motores de búsqueda.
+- **Accesible:** Cumple con los estándares de accesibilidad web, incluyendo texto alternativo para imágenes, etiquetas ARIA y texto con alto contraste.
+- **Galería:** Una galería dinámica y visualmente atractiva que muestra el mejor trabajo de Helen.
+- **Paquetes de Servicios:** Descripciones detalladas de los diferentes paquetes de fotografía disponibles, incluyendo opciones de estudio y al aire libre.
+
+## Tecnologías Utilizadas
+- **HTML5 & CSS3:** Para la estructura y estilo del sitio web.
+- **JavaScript (ES6+):** Para la carga dinámica de contenido, manejo de imágenes y animaciones.
+- **JSON-LD:** Para proporcionar datos estructurados que mejoran el SEO.
+- **Google Fonts:** Para la tipografía.
+- **Flexbox & Grid:** Para el diseño responsivo del layout.
+- **Airtable:** Para el almacenamiento de contenido visual.
+
+## Uso
+Simplemente visita el [sitio web en vivo](https://helenmiranda00.github.io/Portafolio/) para ver el portafolio. Navega por las diferentes secciones usando la barra de navegación.
+
+## Consideraciones SEO
+El sitio web está diseñado con SEO local en mente. Como Helen Miranda opera principalmente en Chiriquí, Panamá, el contenido, palabras clave y datos estructurados reflejan este enfoque. Se incluyen rich snippets para proporcionar a los motores de búsqueda información detallada sobre el negocio, como la ubicación, los servicios ofrecidos y los detalles de contacto.
+
+## Accesibilidad
+El sitio web sigue las mejores prácticas de accesibilidad:
+- Todas las imágenes incluyen texto alternativo descriptivo.
+- Se utilizan etiquetas ARIA donde es necesario.
+- Las relaciones de contraste de color cumplen con los estándares WCAG.
+- El sitio web es navegable usando atajos de teclado.
+
+## Rendimiento
+- Las imágenes están optimizadas y algunas se cargan de forma diferida para mejorar los tiempos de carga, mientras que las de la galería, reseñas, servicios y perfil se cargan desde Airtable.
+- Los archivos CSS y JavaScript están minificados.
+- El sitio web está probado en velocidad utilizando [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
+
+## Contacto
+Helen Miranda Photography  
+📞 WhatsApp: +507 6233 6933  
+✉️ Email: Helenph5522@gmail.com
+
+## Licencia
+Este proyecto está bajo una licencia UNLICENSED.
+
+Esto significa que no se otorgan permisos para copiar, distribuir, modificar o utilizar de cualquier forma el código o los contenidos visuales incluidos en este repositorio. Todas las imágenes, textos y otros recursos son propiedad exclusiva de Helen Miranda y están protegidos por derechos de autor.
+
+Cualquier uso no autorizado de los materiales aquí presentes, incluyendo las imágenes de fotografía profesional, está estrictamente prohibido y puede resultar en acciones legales.

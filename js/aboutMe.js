@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             contentDes.style.opacity = '0';
                             title.style.opacity = '1';
                         }
-                    }, 30000);
+                    }, 40000);
 
                     paragrahpList.forEach(span => {
                         span.style.animationName = 'showText';
