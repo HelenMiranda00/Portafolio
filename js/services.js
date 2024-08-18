@@ -1,8 +1,12 @@
-import { API_KEY, baseId, services } from "../API.js";
-import { fetchAPI } from "./fetchAPI.js";
-import { imgOnLoad, isElementMiddleViewport } from "./utils.js";
+import { API_KEY, baseId, profile, services } from "../API.js";
+import { fetchAPI, getInfoProfile } from "./fetchAPI.js";
+import { imgOnLoad } from "./utils.js";
 const API_URL = `https://api.airtable.com/v0/${baseId}/${services}?listRecords&view=services`;
+const dataProfile = `https://api.airtable.com/v0/${baseId}/${profile}?maxRecords=3&view=profile`;
 
+// get data profile
+const contactProfile = fetchAPI(dataProfile, API_KEY);
+// get data services
 const resolve = fetchAPI(API_URL, API_KEY);
 resolve
     .then((result) => {
@@ -107,7 +111,20 @@ resolve
                             packageDetails.appendChild(detailsList);
 
                             // Button
-                            const packageButton = document.createElement("button");
+                            const packageButton = document.createElement("a");
+                            packageButton.classList.add('get-services');
+                            // get whatsapp and add in the button
+                            contactProfile.then(res => {
+                                // information - profile
+                                const infoProfile = getInfoProfile(res?.records);
+                                const whatsapp = infoProfile[0].linkContact[1];
+                                packageButton.href = whatsapp;
+                                packageButton.rel = 'noopener';
+                                packageButton.target = '_blank';
+                            }).catch((err) => {
+                                console.error('Parece que hubo un error: ');
+                                throw err;
+                            });
                             packageButton.textContent = record.textButton;
                             packageDetails.appendChild(packageButton);
 
