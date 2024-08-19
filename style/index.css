@@ -71,8 +71,10 @@ body {
         font-size: 1rem;
         color: var(--clr-100);
         p{
-            margin-bottom: 1rem;
             font-weight: 400;
+        }
+        p:nth-child(2){
+            margin-bottom: 0.5rem;
         }
     }
     .social-media-contact {
@@ -81,8 +83,8 @@ body {
         gap: 2rem;
 
         a {
-            width: 4rem;
-            height: 3rem;
+            width: 3rem;
+            height: 2.5rem;
             background-color: var(--clr-90);
             border-radius: var(--border-radius);
             display: flex;

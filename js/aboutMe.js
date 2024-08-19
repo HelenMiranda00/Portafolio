@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data.then(res => {
         // information - profile
         const infoProfile = getInfoProfile(res?.records);
+        console.log(infoProfile)
         // funtion to create an "a" element for social media icon.
         const createIcon = (parentElement) => {
             infoProfile[0].linkContact.forEach((link, indexLink) => {
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // image - profile
         const imageProfile = imgOnLoad(infoProfile[0].url, infoProfile[0].alt, infoProfile[0].title);
-        const imageProfileModal = imgOnLoad(infoProfile[0].url, infoProfile[0].alt, infoProfile[0].title);
+        const imageProfileModal = imgOnLoad(infoProfile[0].imgModal, infoProfile[0].alt, infoProfile[0].title);
 
         // add img in section about me
         aboutMeSection.firstElementChild.innerHTML = '';
@@ -79,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     // social media icon - profile
                     createIcon(el);
                 };
-                if (el.matches('p')) {
+                if (el.matches('p.email')) {
                     el.innerHTML = '';
                     const stringConEmail = infoProfile[0].linkContact[2];
                     // Expresión regular para encontrar el email

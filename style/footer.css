@@ -14,7 +14,7 @@
 
     .contact-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 100%;
         padding: 1rem;
 
@@ -69,10 +69,10 @@
                 }
             }
 
-            p a {
-                text-decoration: none;
+            p {
                 color: var(--clr-90);
-                font-size: 1rem;    
+                font-size: 1rem;   
+                margin-top: 1rem; 
             }
         }        
     }

@@ -58,6 +58,8 @@ export const getInfoProfile = (array) => {
     return array.map(record => {
         if (record.fields.image_1 && record.fields.image_1[0].size > 0) {
             let url;
+            let imgModal;
+            if (record.fields.image_modal[0].url) { imgModal = record?.fields?.image_modal[0].url }
             if (record.fields.image_1[0].url) { url = record?.fields?.image_1[0].url }
             else if (record.fields.image_2[0].url) { url = record?.fields?.image_2[0]?.url }
             else if (record.fields.image_3[0].url) { url = record?.fields?.image_3[0]?.url }
@@ -66,7 +68,7 @@ export const getInfoProfile = (array) => {
             let iconsContact = record?.fields?.icons;
             let title = record?.fields?.title;
             let alt = record?.fields?.alt;
-            return { title, alt, url, linkContact, iconsContact };
+            return { title, alt, url, imgModal, linkContact, iconsContact };
         }
         return null;
     }).filter(item => item !== null);
