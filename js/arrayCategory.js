@@ -1,6 +1,5 @@
-export const serviciosDeFotografia = [
+export const Cortometrajes = [
     {
-        titulo: "Sesiones de Estudio Elegantes",
         paquetes: [
             {
                 titulo: "#1.",
@@ -13,7 +12,7 @@ export const serviciosDeFotografia = [
                     "1 hora de sesión",
                     "Todas las fotos entregadas en formato digital en máxima calidad"
                 ],
-                botonTexto: "¡Captura tu esencia ahora!"
+               
             },
             {
                 titulo: "#2.",
@@ -28,7 +27,6 @@ export const serviciosDeFotografia = [
                     "Todas las fotos entregadas en formato digital en máxima calidad",
                     "1 Foto impresa 8x10"
                 ],
-                botonTexto: "¡Haz realidad tu visión!"
             },
             {
                 titulo: "#3.",
@@ -44,12 +42,11 @@ export const serviciosDeFotografia = [
                     "3 fotos impresas tamaño 8x10",
                     "1 video de 1 minuto (vertical u horizontal)"
                 ],
-                botonTexto: "¡Vive la experiencia premium!"
+            
             }
         ]
     },
     {
-        titulo: "Sesiones al Aire Libre Vibrantes",
         paquetes: [
             {
                 titulo: "#1.",
@@ -62,7 +59,6 @@ export const serviciosDeFotografia = [
                     "1 hora de sesión",
                     "Todas las fotos entregadas en formato digital en máxima calidad"
                 ],
-                botonTexto: "¡Reserva tu aventura ahora!"
             },
             {
                 titulo: "#2.",
@@ -77,7 +73,6 @@ export const serviciosDeFotografia = [
                     "Todas las fotos entregadas en formato digital en máxima calidad",
                     "1 Foto impresa 8x10"
                 ],
-                botonTexto: "¡Explora y posa!"
             },
             {
                 titulo: "#3.",
@@ -93,7 +88,6 @@ export const serviciosDeFotografia = [
                     "3 fotos impresas tamaño 8x10",
                     "1 video de 1 minuto (vertical u horizontal)"
                 ],
-                botonTexto: "¡Disfruta de la experiencia premium!"
             }
         ]
     },
